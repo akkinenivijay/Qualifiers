@@ -19,9 +19,10 @@
 % % => can't leave blank line after this
 % (remove comment for this hack)
 % \renewcommand{\paragraph}[1]{\vskip 6pt\noindent\textbf{#1 }}
-
+\usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{url}
+\usepackage{underscore}
 
 
 \numberofauthors{1}
@@ -205,88 +206,24 @@ Model traversing techniques are pretty robust agianst network configuration chan
 The biggest drawback is the Fault Propagation Patterns and when there  fault is a logical combination of multiple devices and byzatine problems. It also incurs heavy testing costs. 
 
 \section{Graph-theoretic techniques}
-
- The interaction beetween the mobile client and server is carried over the webservices which are designed in a restful manner.  The restful services are deployed on a NodeJs platform that is built on Chrome's Javascript Runtime for easily building fast scalable network applications. NodeJs uses an event-driven, non-blocking I/O model that makes it lightweight, effcient and perfect for data-intensive real time applications that run accross distributed devices. Several protocols as HTTP and TCP/IP are built into the node platform. The REST Webservice provides a base url to invoke for a resource (eg: http://trafficanalyzer.gsu.edu/user/123456/updatelocation). When the rest webservice is invoked query data is passed as HTTP body content and is used by the webservice proxy. HTTP post, get, put, delete methods are analogous to create, read, update and delete of a resource. The data passed from the mobile client to the server would be of JSON format example({"facebookid":1432214523423,"firstname":"vijay",
-"lastname":"akkineni","latitiude": 34.304567,"longitude":-84.056784,"routeinfo":[binarydata]}).
  
-The data passed in via restful urls are parsed and saved in the NoSql Database HBase.  HBase is an open source non relational, distributed database. HBase is not a replacement for the traditional database but it is a column oriented database management system that runs on top of Hadoop file system. HBase applications are written in mapReduce style. Hbase system has a set of tables and tables must have aprimary key which will be used to access the data and supports querying only on the primary key.  Traffic Analyzer app uses the Facebook social login identity as the unique primary key for every user and also stores the route information in the column families. Installing Hbase and running it on cloud environment has been a challenge to me. To achieve this an Amazom machine instance was created using Hbase installed on the image and the image is provisioned on two nodes. One of the nodes acts as primary node and the other secondary node as HBase needs a master node for house keeping. Since EC2 instances are paid services, as soon as we stop and start the server IP address of the server changes. This issue was resolved by running a DNS server to provide a name service to the instances so that we can use names to resolve rather than IP address. 
+Grap theoretic techniques depend on gaphical model of a system called fault proppagation model(FPM). FPM represents fault and symptoms that occur in a system. 
+The symptoms that are observed are mapped into nodes in the FPM and localization algorithms analyze the graph to infer the best explanation of the observed symptoms. 
 
-\subsection{Client Architecture}
+These techniques require a knowlede of depedencies among the abstract and physical system components and how these failures in one component are related to 
+other components. The success of the fault localiztion algorithm depends on the the accuracy of this a priori specification.
 
-The critical component of \textit{Traffic Analyzer} is the core location component to identify the users geo location. Apple IOS provides CoreLocation API for communicating with device hardware to get the users location. Core location supports magnetometer, direction in which the device is pointing and also whether the device is moving also known as its course. The API has several classes to handle the heading and course information in its direction-related API calls.
-
-The key aspect of Traffic Analyzer is to detect the hardware support and act accordingly on applications behaviour. However, location framework does not supports at the API level the availability of hardware, instead the hardware requirements must be specified at the application level before deploying onto the device. The hardware of interest for the requirements are AGPS, Compass, WiFi, Cellular Reception.
-
-The Mapping needs of the application are met by the Mapkit and Google maps frameworks of IOS and Android respectively. These frameworks allows us to embed maps on the application, provide support to add annotations and overlays on top of it, show users location on the map and tracking modes.
-
-\subsection{Application Functionality}
-The location framework is an abstraction on top of three main methods of geolocation. The least accuracy level is obtained from the cellular network triangulation method to locate the user and provides a position upto 12km and error can be reduced to 2-3 km based on the closest tower. The next level is provided by the Wifi. This is very precise for about 100m, however the user has to be connected to a wireless hotspot. Finally the highest level of accuracy is provided by GPS and has the error less that 40m. The cost and energy consumption also varies linearly with the decrease of error component in the above hardware. The two parameters that are used int he application are \textit{distanceFilter} and \textit{desiredAccuracy}. These parameters lets the application know on how frequently it will recieve location updates and how accurate the updated readings are.
-
-\begin{table}[ht]
-\caption{Desired Accuracy Values for Traffic Analyzer}
-\centering
-\begin{tabular}{l p{2cm}} \hline
-Constant Value & Definition \\
-%heading
-\hline
-kCLLocationAccuracyBestForNavigation & Standard accuracy intended for navigational apps. \\
-kCLLocationAccuracyBest & Use highest accuracy available. \\
-kCLLocationAccuracyNearestTenMeters & 10 meters accuracy. \\
-kCLLocationAccuracyHundredMeters & 100 meters accuracy. \\
-kCLLocationAccuracyKilometer & Accuracy upto 1km. \\
-kCLLocationAccuracyThreeKilometers & Accuracy upto 3km. \\
-\hline
-\end{tabular}
-\label{table:desaccuracy}
-\end{table}
-
-In Traffic Analyzer saving energy is a primary deisgn goal and consumption is reduced based on the hardware device we choose for getting the location info. Our application checks the battery level and when the energy levels of the battery depletes to 30\% of the total energy it fallsback to the least accurate mode of wifi or cell provider.
-
-The application starts by user entering the target address where he is headed and a route planning is performed. Once the input address is forward geocoded so that address is translated to latitude and longitude. Once the driving directions and user route plan is finalized by selecting  one of the routes from the driving directions. The figure 2,3 and 4 describes this behaviour. Planning will now be performed to decide when to perform polling and where. Polling here refers to the querying of the device GPS to fetch the location information. Once querying the device hardware for the location info, this information is now transferred to the server using the restful services that are exposed.
+FPM's are genrally modeled as (i) Cuasaultiy graph is is a DAG whose nodes are events and edges represent the causality implications i.e cause effect relationships 
+between events. They are carry probabilties to the nodes and edges implying the probability of a certain event to happen. 
+Dependency Graph is a directed graph {\it{G=(O,D)}} where O represent a finite set of nodes and D are the depedency edges between Objects. 
+The directed edge (o$_{i}$,o$_{j}$) $\in$ D represents that when o$_{i}$ fails o$_{j}$ fails or emits some kind of error. 
+The edges are also labeled with conditional probabilities. Figure 4 represents such a depedency graph.
 
 \begin{figure}[h!]
-  \caption{Address Input}
+  \caption{A Network example along with the dependecy graph \cite{Katzela:95}}
   \centering
-    \includegraphics[scale=0.4]{address}
+    \includegraphics[width=0.5\textwidth]{Fig4}
 \end{figure}
-
-\begin{figure}[h!]
-  \caption{Calculate Route}
-  \centering
-    \includegraphics[scale=0.4]{CalcRoute}
-\end{figure}
-
-\begin{figure}[h!]
-  \caption{Driving Directions for Polling Planning}
-  \centering
-    \includegraphics[scale=0.4]{RoutePrep}
-\end{figure}
-
-The polling logic currently is very basic and would need further refinement based on statistics. Polling is achieved by using dispatch async that would lets us call a thread and dispatch after can be used in conjuction to achieve this functionality. The current logic is based upon speed and distance filter. NSTimer is an useful function provided by IOS which enables us to configure timer based on an interval. This timer is used to trigger the dispatch queue threads that perform atomic operations of updating the location information in the server.
-
-\begin{itemize}
-\item If the destination is above 5 miles and the current speed of the vehicle is above 50 MPH polling is performed only every 15 secs and the distance filter is increased to 500m such that we do not have to perform querying often.
-\item If the user is travellign at speeds less than 10MPH polling interval is set to 15secs and distance filter is set to 20m.
-\item If the user speed is in between 15-50, then polling interval is set to 5, 8 and 12 secs respectively for 20mph,30mph,40mph.
-\end{itemize}
-
-The coverage area of the mobile is limitied so in this scenario the GPS would be able to read the position but with the lack of coverage data provider the server calls would fail. To overcome this kind of failure a SQL Lite database on the mobile is used to store temporary information that needs to be passed to the server.  The structure of the table in SQL Lite database is very similar to the information that is passed in to the restful services. The table is called TEMP\_USER\_LOC\_INFO which has the attribtues of latitude, longitude and other route related info of speed, direction and etc.
-
-The traffic rendering part on the maps is achieved via overlay's on the map. On the load of the screen to view traffic a webservice pulls all the coordinates on the route intersection and draws overlay on top of the view. The traffic is rendered as red, yellow and green paths along the coordinates.
-
-\begin{figure}[h!]
-  \caption{Overlay Rendering of Traffic}
-  \centering
-    \includegraphics[scale=0.4]{traffic}
-\end{figure}
-
-\subsection{Kalman Filtering}
-Kalman Filter is also known as linear quadratic estimation is an algorithm used to measure a series of measurements observed over the time and containing noise (random variations) and other inaccuracies, and produces estimates of unknown variables that tend to be more precise than those based on a single measurement alone.
-
-The state transition equation for velocity would be 
-\begin{math}
-V_n = V_{n-1} + w_n
-\end{math}. W represents the noise in the system. Next we prepare kalman filter inputs and constants and the the algorithm proceeds in the two steps in the first step it predicts the next data for velocity and in the second step thee estimates are updated with the weighted average of the actual measurement involved. Kalman filter is implemented on the server side however there are still issues with implementation of kalman filter on how to run it on demand and update the data variables.
 
 \section{Timeline of Project Proposal}
 Timeline:

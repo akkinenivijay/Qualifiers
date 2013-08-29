@@ -100,4 +100,24 @@ J.F. Jordaan, M.E. Paterok.
 \newblock Event correlation in heterogeneous networks using the OSI management framework.
 \newblock H.G. Hegering, Y. Yemini (Eds.), Integrated Network Management III, North-Holland, Amsterdam (1993), pp. 683–695.
 
+\bibitem{Sethi:04}
+M. Steinder, A.S. Sethi.
+\newblock Probabilistic fault diagnosis in communication systems through incremental hypothesis updating.
+\newblock Comput. Networks, 45 (2004), pp. 537–562.
+
+\bibitem{Sethi:041}
+M. Steinder, A.S. Sethi.
+\newblock Non-deterministic fault localization in communication systems using belief networks.
+\newblock IEEE/ACM Transactions on Networking (2004) in press.
+
+\bibitem{Sethi:02}
+M. Steinder, A.S. Sethi.
+\newblock End-to-end service failure diagnosis using belief networks.
+\newblock R. Stadler, M. Ulema (Eds.), Proc. Network Operation and Management Symposium, Florence, Italy, April (2002), pp. 375–390.
+
+\bibitem{Katzela:95}
+I. Katzela, M. Schwartz.
+\newblock Schemes for fault identification in communication networks.
+\newblock IEEE/ACM Transactions on Networking, 3 (6) (1995), pp. 733–764.
+
 \end{thebibliography}
