@@ -198,14 +198,7 @@ Model traversing techniques are pretty robust agianst network configuration chan
 
 The biggest drawback is the Fault Propagation Patterns and when there  fault is a logical combination of multiple devices and byzatine problems. It also incurs heavy testing costs. 
 
-\begin{figure}[h!]
-  \caption{System Architecture}
-  \centering
-    \includegraphics[width=0.5\textwidth]{Traffic_Analyzer}
-\end{figure}
-
-
-\subsection{Server Architecture}
+\section{Graph-theoretic techniques}
 
  The interaction beetween the mobile client and server is carried over the webservices which are designed in a restful manner.  The restful services are deployed on a NodeJs platform that is built on Chrome's Javascript Runtime for easily building fast scalable network applications. NodeJs uses an event-driven, non-blocking I/O model that makes it lightweight, effcient and perfect for data-intensive real time applications that run accross distributed devices. Several protocols as HTTP and TCP/IP are built into the node platform. The REST Webservice provides a base url to invoke for a resource (eg: http://trafficanalyzer.gsu.edu/user/123456/updatelocation). When the rest webservice is invoked query data is passed as HTTP body content and is used by the webservice proxy. HTTP post, get, put, delete methods are analogous to create, read, update and delete of a resource. The data passed from the mobile client to the server would be of JSON format example({"facebookid":1432214523423,"firstname":"vijay",
 "lastname":"akkineni","latitiude": 34.304567,"longitude":-84.056784,"routeinfo":[binarydata]}).
