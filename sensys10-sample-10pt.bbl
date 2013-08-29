@@ -1,0 +1,103 @@
+\begin{thebibliography}{1}
+
+\bibitem{KatzelaThesis:1996}
+I. Katzela
+\newblock Fault diagnosis in telecommunications networks, Ph.D. Thesis.
+\newblock School of Arts and Sciences, Columbia University, New York, 1996.
+
+\bibitem{Katzela:1995}
+I. Katzela, A.T. Bouloutas, S.B. Calo
+\newblock Centralized vs distributed fault localization.
+\newblock A.S. Sethi, F. Faure-Vincent, Y. Raynaud (Eds.), Integrated Network Management IV, Chapman and Hall, London (1995), pp. 250–263.
+
+\bibitem{Yemini:1996}
+S.A. Yemini, S. Kliger, E. Mozes, Y. Yemini, D. Ohsie.
+\newblock High speed and robust event correlation.
+\newblock IEEE Communications Magazine, 34 (5) (1996), pp. 82–90.
+
+\bibitem{Peng:97}
+Peng Wu, Rajiv Bhatnagar, Lennie Epshtein, Malini Bhandaru, Zhongwen Shi.
+\newblock Alarm Correlation Engine (ACE).
+\newblock GTE Laboratories Incorporated.
+
+\bibitem{Liu:99}
+G. Liu, A.K. Mok, E.J. Yang.
+\newblock Composite events for network event correlation - JECTOR.
+\newblock Integrated Network Management VI, IEEE (1999), pp. 247–260.
+
+\bibitem{Nygate:95}
+Y.A. Nygate.
+\newblock ECXPERT: Event correlation using rule and object based techniques.
+\newblock Integrated Network Management IV, Chapman and Hall, London (1995), pp. 278–289.
+
+\bibitem{Lor:93}
+K.-W.E. Lor.
+\newblock A network diagnostic expert system for Acculink™ multiplexers based on a general network diagnostic scheme.
+\newblock Integrated Network Management III, North-Holland, Amsterdam (1993), pp. 659–669.
+
+\bibitem{Lewis:93}
+L. Lewis.
+\newblock A case-based reasoning approach to the resolution of faults in communications networks.
+\newblock Integrated Network Management III, North-Holland, Amsterdam (1993).
+
+\bibitem{Gardner:96}
+R.D. Gardner, D.A. Harle.
+\newblock Methods and systems for alarm correlation.
+\newblock Proc. of GLOBECOM, London, UK, November (1996), pp. 136–140.
+
+\bibitem{Gardner:97}
+R.D. Gardner, D.A. Harle.
+\newblock Alarm correlation and network fault resolution using the Kohonen self-organizing map.
+\newblock Proc. of IEEE GLOBECOM, Toronto, Canada, September (1997).
+
+\bibitem{Gardner:98}
+R.D. Gardner, D.A. Harle.
+\newblock Pattern discovery and specification techniques for alarm correlation.
+\newblock NOMS’98, Proc. Network Operation and Management Symposium, New Orleans, LA (1998), pp. 713–722.
+
+\bibitem{Rodosek:98}
+G.D. Rodosek, T. Kaiser.
+\newblock Intelligent assistant: User-guided fault localization.
+\newblock Ninth Int’l Workshop on Distributed Systems: Operations and Management, University of Delaware, Newark, DE, October (1998), pp. 119–129.
+
+\bibitem{Russell:96}
+S. Russell.
+\newblock Machine learning.
+\newblock Artificial Intelligence, Handbook of Perception and Cognition (second ed.), Academic Press, New York (1996), pp. 89–133 (Chapter 4).
+
+\bibitem{Koller:10}
+Daphne Koller, Nir Friedman
+\newblock Probabilistic Graphical Models.
+\newblock MIT Press.
+
+\bibitem{Sethi:01}
+M. Steinder and A.S Sethi.
+\newblock The present and future of event correlation: A need for end to end service fault localization.
+\newblock In N. Callaos et al. World Multi-Conf. Systemics, Cybernetics and Informatics, Vol XII, Orlando, FL, 2001. pp. 124-129.
+
+\bibitem{Katker:96}
+S. Kätker.
+\newblock A modeling framework for integrated distributed systems fault management.
+\newblock In C. Popien (Ed.), Proc. IFIP/IEEE Internat. Conference on Distributed Platforms, pp. 187–198, Dresden, Germany, 1996.
+
+\bibitem{Katker:971}
+S. Kätker, K. Geihs.
+\newblock A generic model for fault isolation in integrated management systems.
+\newblock Journal of Network and Systems Management, 5 (2) (1997), pp. 109–130.
+
+\bibitem{Katker:97}
+S. Kätker, M. Paterok.
+\newblock Fault isolation and event correlation for integrated fault management.
+\newblock Integrated Network Management V, Chapman and Hall, London (1997), pp. 583–596.
+
+\bibitem{Gruschke:98}
+B. Gruschke.
+\newblock Integrated event management: Event correlation using dependency graphs.
+\newblock A.S. Sethi (Ed.), Ninth Internat. Workshop on Distributed Systems: Operations and Management, University of Delaware, Newark, DE, October (1998) , pp. 130–141.
+
+\bibitem{Jordaan:98}
+J.F. Jordaan, M.E. Paterok.
+\newblock Event correlation in heterogeneous networks using the OSI management framework.
+\newblock H.G. Hegering, Y. Yemini (Eds.), Integrated Network Management III, North-Holland, Amsterdam (1993), pp. 683–695.
+
+\end{thebibliography}

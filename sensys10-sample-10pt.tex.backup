@@ -1,0 +1,242 @@
+
+%
+% sample.tex
+% $Id: sample.tex,v 1.1 2006/03/18 00:21:36 johnh Exp johnh $
+%
+
+
+% The default of sigplan-proc-varsize is 9pt, indented paragraphs (acm style)
+% For Sensys or other 10pt conference, use the 10pt option
+%\documentclass{sigplan-proc-varsize}
+% options:
+%\documentclass[9pt]{sigplan-proc-varsize}
+\documentclass[10pt]{sigplan-proc-varsize}
+%\documentclass[noindentedparagraphs]{sigplan-proc-varsize}
+
+
+
+% % hack to avoid the ugly ACM paragraph definition
+% % => can't leave blank line after this
+% (remove comment for this hack)
+% \renewcommand{\paragraph}[1]{\vskip 6pt\noindent\textbf{#1 }}
+
+\usepackage{graphicx}
+\usepackage{url}
+
+
+\numberofauthors{1}
+
+
+\author{
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+%% e-mail address with \email.
+\alignauthor Vijay Akkineni \\
+        \affaddr{Department of Computer Science and Engineering}\\
+        \affaddr{Georgia State University}\\
+       \email{vakkineni1@student.gsu.edu}
+}
+
+\title{Fault localization in Communication Networks}
+
+%\conferenceinfo{Phd Qualifiers'13,} {September 6, 2013, Atlanta, United States.}
+%\CopyrightYear{2013}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper is about fault localization techniques in communication networks worked for Phd qualifiers examination. 
+Fault Localization is an important aspect of network fault management and is a process of deducing the source of a failure from the set of observed indicatations. 
+It has been an important research area in the field of networking both communication networks and wireless sensor networks.
+As commuication networks grow in size and complexity it has been imposing new set of requirements on fault localization. 
+Despite the amount of research done in this field we can still argue that it is an area of open for research. 
+The paper essentially disucsses the work that has been done in this field in the pas few years with emphasis on the both the papers given for the examination.
+\end{abstract}
+
+% A category with the (minimum) three required fields
+\category{H.4}{Communication Networks, Sensor Network Applications}{Miscellaneous}
+
+\keywords{Fault Localization, Communication Networks, Root Cause Analysis, Causal Inference}
+
+\section{Introduction}
+  \label{sec:intro}
+
+Fault diagnosis is an important part of networking. Faults are unavoidable in communication systems but their quick detection and isolation and repair is critical 
+for the robustness, reliability and health of the system. When the networks get large and cumbersome automatic fault diagnosis and fault management is a crucial aspect.
+
+A basic taxonomy in this field is mentioned below.
+
+Event, defined as an exceptional condition occurring in the operation of hardware or software of a managed network, is a central concept pertaining to fault diagnosis.
+
+Faults (also referred to as problems or root causes) constitute a class of network events that can cause other events but are not themselves caused by other 
+events. Faults may be classified as: (1) permanent, (2) intermittent, and (3) transient. A permanent fault exists in a network until a repair action is taken.
+Intermittent faults occur on a discontinuous and periodic basis causing a degradation of service for short periods of time.
+However, frequently re-occurring intermittent faults significantly jeopardize service performance. 
+Transient faults cause a temporary and minor degradation of service.
+
+Error(Failure) is defined as a discrepancy between a computed, observed, or measured value or condition and a true, specified, or theoretically correct value or condition. 
+Error is a consequence of a fault. Faults may or may not cause one or more errors. 
+Errors may cause deviation of a delivered service from the specified service, which is visible to the outside world. 
+Errors do not need to be directly corrected, and in many cases they are not visible externally. 
+However, an error in a network device or software may cause a malfunctioning of dependent network devices or software. 
+Thus, errors may propagate within the network causing failures of faultless hardware or software.
+
+Symptoms are external manifestations of failures. They are observed as alarms—notifications of a potential failure. 
+These notifications may originate from management agents via management protocol messages (SNMP trap and CMIP EVENT-REPORT), 
+from management systems that monitor the network status, e.g., using command ping, system log-files or character streams sent by external equipments.
+
+Figure 1 shows the concepts described above in an end to end perspective.
+
+The process of fault diagnosis usually involves three steps:
+
+\begin{itemize}
+  \item Fault detection, a process of capturing on-line indications of network disorder provided by malfunctioning devices or fault detection agents in the form of alarms.
+  \item Fault localization (also referred to as fault isolation, alarm/event correlation, and root cause analysis) is a set of observed fault indications is analyzed to 
+  find an explanation of the alarms.
+  \item Testing is a process that, given a number of possible explanations, determines the actual faults.
+  \item Fault Correction, by which we mean not only to diagnose, butalso to repair all faulty components within a network (This includes the testing component).
+\end{itemize}
+
+\begin{figure}[h!]
+  \caption{Distinction between fault, error and symptom}s
+  \centering
+    \includegraphics[width=0.5\textwidth]{Fig1}
+\end{figure}
+
+\section{Background Work}
+We can seperate the road traffic estimation based on the sensors used, a Fixed probe and Mobile probe. Panmungee \cite{Panmungmee:12} uses a camera based system on mobile phone to detect the traffic system along with GPS sensor data. The system will automatically evaluate traffic levels in the area that the car has been driven through. The mobile probe collects GPS sensor data and images sequences form the traffic and calculates the average user pace in traffic and image data is used recognize and filter parking data. Menard \cite{Menard:11} compares the Samsung Galaxy STM, Motorola Droid XTM and the iPhone using the real time vehicle tracking application FreeSim Mobile. Using the built-in GPS receiver and the web capabilities of these smart phones, coupled with a V2I architecture, we are able to send a continuous flow of location data to a central server for processing by FreeSim, a real-time traffic simulator.
+
+\cite{Sangwoo:11,Pelin:2010} proposes a mobile-cloud collaborative approach for context-aware navigation by exploiting the computational power of resources made available by Cloud Computing providers as well as the wealth of location-specific resources available on the Internet and is also a mobile cloud collaborative traffic lights detector using image processing techniques on the images retrieved by the mobile phone for traffic signals detection which is helpful for the color blind and visually impaired. 
+
+\cite{Endarnoto:2011} Analyzes traffic system based on the social media data like twitter. The big constraint to the above approaches is the limitation of the system to a particular operating system. The developed applications are restricted to a single mobile operating system that limits the amount of application usage. The data acquired by these systems are not exposed as service for intelligent analysis to other systems so that collaboration can be performed based on the data services exposed. Integration with social network has been limited to a very particular social media like twitter. The traffic analysis from social feeds doesn't provide real time traffic analysis. The system is not scalable for usage across millions of users and the amount data that will be accrued on the road.\cite{Dezani:2012,Jong:11} are works related to the area.
+
+\section{Architecture}
+\subsection{Design Goals}
+The design goals for the system are mainly scalability, energy savings, sensor failover and operating system independence. To achieve operating system independence, the main aim was to write code once and deploy it to various mobile operating systems. Open source Titanium API is a platform for developing mobile solutions using web technologies. Titanium allows developers to write application code in Javascript language and API would invoke native API provided by the operating system to access functioanlity realted to geoloation, accelerometer and maps. Project was started off using Titanium API and later realized that the Maps API provided by the titanium doesnt meet the requirements of the project. As custom overlays on the Maps are not provided by titanium api on IOS. Currently Titanium is used only for android based devices and IOS application is developed in native language of Objective-C. The difficulty in 	targetting multiple mobile operating systems is in the diference between the API's provided by different sensors and the differences in the mapping solutions used by Android and IOS.
+
+The scalability design goal is acheived by a cloud backing to the mobile solution. The cloud infrastructure chosen is Amazon EC2 and Heroku. Amazon EC2 is the elastic compute cloud provided by Amazon which allows users to rent virtual computers on which they can run their applications. EC2 allows a scalable deployment of an application by providing user the capability to create a machine instance of choice and be able to start, stop or terminate the instance and also gives the capability to scale up the number of instances as needed and charges on per hour basis. Since we can scale the number of nodes hence the term elastic. Heroku is another cloud provider on which much of the development work was done and the reason was for the cost of cloud provider. Heroku provided 750 hours of free development time on their cloud to new users.
+
+The energy savings mechanism was included in polling the sensors for location information. Energy consumption significantly varies based on the sensor that device is using to locate the device. Sensor failover is handled primarly by the host of sensors like AGPS (Assisted Geographical Positioning System), Wi-Fi, Cellular Location and Digital Compass. Much of the smartphones in the market are provided by these basic sensors to assist in geolocation.
+
+\begin{figure}[h!]
+  \caption{System Architecture}
+  \centering
+    \includegraphics[width=0.5\textwidth]{Traffic_Analyzer}
+\end{figure}
+
+
+\subsection{Server Architecture}
+
+ The interaction beetween the mobile client and server is carried over the webservices which are designed in a restful manner.  The restful services are deployed on a NodeJs platform that is built on Chrome's Javascript Runtime for easily building fast scalable network applications. NodeJs uses an event-driven, non-blocking I/O model that makes it lightweight, effcient and perfect for data-intensive real time applications that run accross distributed devices. Several protocols as HTTP and TCP/IP are built into the node platform. The REST Webservice provides a base url to invoke for a resource (eg: http://trafficanalyzer.gsu.edu/user/123456/updatelocation). When the rest webservice is invoked query data is passed as HTTP body content and is used by the webservice proxy. HTTP post, get, put, delete methods are analogous to create, read, update and delete of a resource. The data passed from the mobile client to the server would be of JSON format example({"facebookid":1432214523423,"firstname":"vijay",
+"lastname":"akkineni","latitiude": 34.304567,"longitude":-84.056784,"routeinfo":[binarydata]}).
+ 
+The data passed in via restful urls are parsed and saved in the NoSql Database HBase.  HBase is an open source non relational, distributed database. HBase is not a replacement for the traditional database but it is a column oriented database management system that runs on top of Hadoop file system. HBase applications are written in mapReduce style. Hbase system has a set of tables and tables must have aprimary key which will be used to access the data and supports querying only on the primary key.  Traffic Analyzer app uses the Facebook social login identity as the unique primary key for every user and also stores the route information in the column families. Installing Hbase and running it on cloud environment has been a challenge to me. To achieve this an Amazom machine instance was created using Hbase installed on the image and the image is provisioned on two nodes. One of the nodes acts as primary node and the other secondary node as HBase needs a master node for house keeping. Since EC2 instances are paid services, as soon as we stop and start the server IP address of the server changes. This issue was resolved by running a DNS server to provide a name service to the instances so that we can use names to resolve rather than IP address. 
+
+\subsection{Client Architecture}
+
+The critical component of \textit{Traffic Analyzer} is the core location component to identify the users geo location. Apple IOS provides CoreLocation API for communicating with device hardware to get the users location. Core location supports magnetometer, direction in which the device is pointing and also whether the device is moving also known as its course. The API has several classes to handle the heading and course information in its direction-related API calls.
+
+The key aspect of Traffic Analyzer is to detect the hardware support and act accordingly on applications behaviour. However, location framework does not supports at the API level the availability of hardware, instead the hardware requirements must be specified at the application level before deploying onto the device. The hardware of interest for the requirements are AGPS, Compass, WiFi, Cellular Reception.
+
+The Mapping needs of the application are met by the Mapkit and Google maps frameworks of IOS and Android respectively. These frameworks allows us to embed maps on the application, provide support to add annotations and overlays on top of it, show users location on the map and tracking modes.
+
+\subsection{Application Functionality}
+The location framework is an abstraction on top of three main methods of geolocation. The least accuracy level is obtained from the cellular network triangulation method to locate the user and provides a position upto 12km and error can be reduced to 2-3 km based on the closest tower. The next level is provided by the Wifi. This is very precise for about 100m, however the user has to be connected to a wireless hotspot. Finally the highest level of accuracy is provided by GPS and has the error less that 40m. The cost and energy consumption also varies linearly with the decrease of error component in the above hardware. The two parameters that are used int he application are \textit{distanceFilter} and \textit{desiredAccuracy}. These parameters lets the application know on how frequently it will recieve location updates and how accurate the updated readings are.
+
+\begin{table}[ht]
+\caption{Desired Accuracy Values for Traffic Analyzer}
+\centering
+\begin{tabular}{l p{2cm}} \hline
+Constant Value & Definition \\
+%heading
+\hline
+kCLLocationAccuracyBestForNavigation & Standard accuracy intended for navigational apps. \\
+kCLLocationAccuracyBest & Use highest accuracy available. \\
+kCLLocationAccuracyNearestTenMeters & 10 meters accuracy. \\
+kCLLocationAccuracyHundredMeters & 100 meters accuracy. \\
+kCLLocationAccuracyKilometer & Accuracy upto 1km. \\
+kCLLocationAccuracyThreeKilometers & Accuracy upto 3km. \\
+\hline
+\end{tabular}
+\label{table:desaccuracy}
+\end{table}
+
+In Traffic Analyzer saving energy is a primary deisgn goal and consumption is reduced based on the hardware device we choose for getting the location info. Our application checks the battery level and when the energy levels of the battery depletes to 30\% of the total energy it fallsback to the least accurate mode of wifi or cell provider.
+
+The application starts by user entering the target address where he is headed and a route planning is performed. Once the input address is forward geocoded so that address is translated to latitude and longitude. Once the driving directions and user route plan is finalized by selecting  one of the routes from the driving directions. The figure 2,3 and 4 describes this behaviour. Planning will now be performed to decide when to perform polling and where. Polling here refers to the querying of the device GPS to fetch the location information. Once querying the device hardware for the location info, this information is now transferred to the server using the restful services that are exposed.
+
+\begin{figure}[h!]
+  \caption{Address Input}
+  \centering
+    \includegraphics[scale=0.4]{address}
+\end{figure}
+
+\begin{figure}[h!]
+  \caption{Calculate Route}
+  \centering
+    \includegraphics[scale=0.4]{CalcRoute}
+\end{figure}
+
+\begin{figure}[h!]
+  \caption{Driving Directions for Polling Planning}
+  \centering
+    \includegraphics[scale=0.4]{RoutePrep}
+\end{figure}
+
+The polling logic currently is very basic and would need further refinement based on statistics. Polling is achieved by using dispatch async that would lets us call a thread and dispatch after can be used in conjuction to achieve this functionality. The current logic is based upon speed and distance filter. NSTimer is an useful function provided by IOS which enables us to configure timer based on an interval. This timer is used to trigger the dispatch queue threads that perform atomic operations of updating the location information in the server.
+
+\begin{itemize}
+\item If the destination is above 5 miles and the current speed of the vehicle is above 50 MPH polling is performed only every 15 secs and the distance filter is increased to 500m such that we do not have to perform querying often.
+\item If the user is travellign at speeds less than 10MPH polling interval is set to 15secs and distance filter is set to 20m.
+\item If the user speed is in between 15-50, then polling interval is set to 5, 8 and 12 secs respectively for 20mph,30mph,40mph.
+\end{itemize}
+
+The coverage area of the mobile is limitied so in this scenario the GPS would be able to read the position but with the lack of coverage data provider the server calls would fail. To overcome this kind of failure a SQL Lite database on the mobile is used to store temporary information that needs to be passed to the server.  The structure of the table in SQL Lite database is very similar to the information that is passed in to the restful services. The table is called TEMP\_USER\_LOC\_INFO which has the attribtues of latitude, longitude and other route related info of speed, direction and etc.
+
+The traffic rendering part on the maps is achieved via overlay's on the map. On the load of the screen to view traffic a webservice pulls all the coordinates on the route intersection and draws overlay on top of the view. The traffic is rendered as red, yellow and green paths along the coordinates.
+
+\begin{figure}[h!]
+  \caption{Overlay Rendering of Traffic}
+  \centering
+    \includegraphics[scale=0.4]{traffic}
+\end{figure}
+
+\subsection{Kalman Filtering}
+Kalman Filter is also known as linear quadratic estimation is an algorithm used to measure a series of measurements observed over the time and containing noise (random variations) and other inaccuracies, and produces estimates of unknown variables that tend to be more precise than those based on a single measurement alone.
+
+The state transition equation for velocity would be 
+\begin{math}
+V_n = V_{n-1} + w_n
+\end{math}. W represents the noise in the system. Next we prepare kalman filter inputs and constants and the the algorithm proceeds in the two steps in the first step it predicts the next data for velocity and in the second step thee estimates are updated with the weighted average of the actual measurement involved. Kalman filter is implemented on the server side however there are still issues with implementation of kalman filter on how to run it on demand and update the data variables.
+
+\section{Timeline of Project Proposal}
+Timeline:
+\begin{itemize}
+\item Research on infrastructure to generate application on multiple smart phones. ( 2 weeks)
+\item Enable Facebook Social Network based login for identity purpose. (1 week)
+\item Setting up cloud infrastructure and using a Map Reduced based Hbase NoSQL to store User data. (2 weeks)
+\item Integrating communication from the Application to the Cloud. (1 week)
+\item Rendering overlay of vehicles and traffic on the Map. ( 2 weeks)
+\item Experimenting with Kalman Filtering to predict state. (1 week)
+\end{itemize}
+
+\section{Conclusions and Future Work}
+ The Traffic Analyzer project was able to successfully track user movement and store them in a databse and render the traffic pattern on the maps. The project was able to meet the proposed requirements. There are still a lot of areas to improve in the project. The current polling based mechanism is very primitive and polling can still be improved with optimization methodologies and statistics driven approaches and the kalman filtering is currently is not producing accurate results. Kalman filtering can smooth data in the abscence of data. Further evaluation is needed in mapping solutions  whcih provide ease of drwaing overlays and integration with various other data sources apart from the sensors should be researched.  Project repo can be found at https://github.com/akkinenivijay/TrafficAnalyzer
+
+%\end{document} 
+
+\section{Evaluation}
+My evaluation criterion for the project depends on the goals I desired to achieve. The goal for me is to achieve A in this course, upon the delivery of the Mobile App communicating with cloud infrastructure and rendering of the data on Google Maps. This is the brunt of the project and requires significant effort. Enabling social integration and kalman filtering are additional characteristics. Overall I am happy with the learning outcome from this project as I learned both Android, IOS Systems and Map API's.
+
+\appendix
+%\bibliographystyle{abbrv}
+%\bibliography{sigproc}
+
+\input{sensys10-sample-10pt.bbl}
+
+\end{document}
