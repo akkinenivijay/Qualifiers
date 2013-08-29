@@ -192,6 +192,12 @@ The event correlation in model traversing techniques is event driven as when an 
   \item Event Origin - to identify if the event occurred is primary or secondary.
 \end{itemize}
 
+\begin{figure}[h!]
+  \caption{Architecture of a model traversing technique prototype}
+  \centering
+    \includegraphics[width=0.5\textwidth]{Fig3}
+\end{figure}
+
 The MO's provide functions which lets the process test the entity for its operational status.  The root cause is found when the process stops at an entity and validates that it is a malfucntioning object and doesn't depend on any other object. In a multi layer model vertical search is performed first and then horizontal search in the next lower layer to check its peer at the end of search process votes are collected to identify the faulty elements and the device that recieves the most votes is declared faulty and a testing process kicks in to test the validity of the hypothesis. 
 
 Model traversing techniques are pretty robust agianst network configuration changes and very useful in the scenario's where automated testing is a requirement and the depedency model is very natural as they are modeled as Trees or Graphs. 

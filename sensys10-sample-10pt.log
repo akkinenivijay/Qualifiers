@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  29 AUG 2013 16:39
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  29 AUG 2013 17:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -285,126 +285,140 @@ Overfull \hbox (11.9246pt too wide) in paragraph at lines 141--142
  [][] 
  []
 
-[2 <./Fig1.jpg> <./Fig2.jpg>]
-Underfull \hbox (badness 1275) in paragraph at lines 203--205
+[2 <./Fig1.jpg> <./Fig2.jpg>] <Fig3.png, id=16, 671.50874pt x 250.9375pt>
+File: Fig3.png Graphic file (type png)
+
+<use Fig3.png>
+Package pdftex.def Info: Fig3.png used on input line 198.
+(pdftex.def)             Requested size: 252.94499pt x 94.5225pt.
+
+Overfull \hbox (11.9246pt too wide) in paragraph at lines 198--199
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1275) in paragraph at lines 209--211
 \OT1/ptm/m/n/10 is car-ried over the web-ser-vices which are de-signed in
  []
 
 
-Underfull \hbox (badness 2088) in paragraph at lines 203--205
+Underfull \hbox (badness 2088) in paragraph at lines 209--211
 \OT1/ptm/m/n/10 Run-time for eas-ily build-ing fast scal-able net-work ap-
  []
 
 
-Underfull \hbox (badness 1194) in paragraph at lines 203--205
+Underfull \hbox (badness 1194) in paragraph at lines 209--211
 \OT1/ptm/m/n/10 pli-ca-tions. NodeJs uses an event-driven, non-blocking
  []
 
 
-Underfull \hbox (badness 1067) in paragraph at lines 203--205
+Underfull \hbox (badness 1067) in paragraph at lines 209--211
 \OT1/ptm/m/n/10 are built into the node plat-form. The REST Web-ser-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--205
+Underfull \hbox (badness 10000) in paragraph at lines 209--211
 \OT1/ptm/m/n/10 http://trafficanalyzer.gsu.edu/user/123456/updatelocation).
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--205
+Underfull \hbox (badness 10000) in paragraph at lines 209--211
 \OT1/ptm/m/n/10 ex-am-ple("facebookid":1432214523423,"firstname":"vijay",
  []
 
-[3]
+[3 <./Fig3.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 222.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 228.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 222.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 228.
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--227
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
 []\OT1/ptm/m/n/10 Standard
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--227
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
 \OT1/ptm/m/n/10 ac-cu-racy
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--227
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
 \OT1/ptm/m/n/10 in-tended for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--227
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
 \OT1/ptm/m/n/10 nav-i-ga-tional
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
 []\OT1/ptm/m/n/10 Use high-est
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
 \OT1/ptm/m/n/10 ac-cu-racy
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
 []\OT1/ptm/m/n/10 100 me-ters
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--231
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
 []\OT1/ptm/m/n/10 Accuracy
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 231--232
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
 []\OT1/ptm/m/n/10 Accuracy
  []
 
 
-Overfull \hbox (7.08376pt too wide) in paragraph at lines 222--235
+Overfull \hbox (7.08376pt too wide) in paragraph at lines 228--241
  [][] 
  []
 
-<address.png, id=19, 359.3425pt x 713.66624pt>
+<address.png, id=20, 359.3425pt x 713.66624pt>
 File: address.png Graphic file (type png)
  <use address.png>
-Package pdftex.def Info: address.png used on input line 244.
+Package pdftex.def Info: address.png used on input line 250.
 (pdftex.def)             Requested size: 143.73445pt x 285.46143pt.
 
-<CalcRoute.png, id=21, 359.3425pt x 711.65875pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<CalcRoute.png, id=22, 359.3425pt x 711.65875pt>
 File: CalcRoute.png Graphic file (type png)
  <use CalcRoute.png>
-Package pdftex.def Info: CalcRoute.png used on input line 250.
+Package pdftex.def Info: CalcRoute.png used on input line 256.
 (pdftex.def)             Requested size: 143.73445pt x 284.65845pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<RoutePrep.png, id=22, 372.39125pt x 720.6925pt>
+<RoutePrep.png, id=23, 372.39125pt x 720.6925pt>
 File: RoutePrep.png Graphic file (type png)
  <use RoutePrep.png>
-Package pdftex.def Info: RoutePrep.png used on input line 256.
+Package pdftex.def Info: RoutePrep.png used on input line 262.
 (pdftex.def)             Requested size: 148.95386pt x 288.2719pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[4 <./address.png>] <traffic.png, id=28, 354.32375pt x 713.66624pt>
+[4] <traffic.png, id=28, 354.32375pt x 713.66624pt>
 File: traffic.png Graphic file (type png)
-
-<use traffic.png>
-Package pdftex.def Info: traffic.png used on input line 274.
+ <use traffic.png>
+Package pdftex.def Info: traffic.png used on input line 280.
 (pdftex.def)             Requested size: 141.72697pt x 285.46143pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5 <./CalcRoute.png> <./RoutePrep.png>] (./sensys10-sample-10pt.bbl
+[5 <./address.png> <./CalcRoute.png> <./RoutePrep.png>]
+(./sensys10-sample-10pt.bbl
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
@@ -432,6 +446,7 @@ Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
+ [6 <./traffic.png>]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
@@ -441,7 +456,6 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
- [6 <./traffic.png>]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¤ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
@@ -472,10 +486,10 @@ Missing character: There is no “ in font ptmr7t!
 
 ] (./sensys10-sample-10pt.aux) ) 
 Here is how much of TeX's memory you used:
- 1983 strings out of 493488
- 28254 string characters out of 3141326
+ 1988 strings out of 493488
+ 28313 string characters out of 3141326
  88463 words of memory out of 3000000
- 5250 multiletter control sequences out of 15000+200000
+ 5254 multiletter control sequences out of 15000+200000
  39544 words of font info for 77 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  37i,10n,23p,1288b,315s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -487,10 +501,10 @@ cm/cmsy10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvb
 </usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/loca
 l/texlive/2012/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/
 2012/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sensys10-sample-10pt.pdf (7 pages, 882473 bytes).
+Output written on sensys10-sample-10pt.pdf (7 pages, 906616 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
+ 69 PDF objects out of 1000 (max. 8388607)
  41 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
