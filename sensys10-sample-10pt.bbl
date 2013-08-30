@@ -145,4 +145,24 @@ S. Kandula, D. Katabi, and J.P. Vasseur.
 \newblock Shrink: A Tool for Failure Diagnosis in IP Networks.
 \newblock In ACM SIGCOMM MineNet-05, Aug 2005.
 
+\bibitem{pclee:07}
+Patrick P. C. Lee, Vishal Misra, and Dan Rubenstein
+\newblock Toward Optimal Network Fault Correction in Externally Managed Overlay Networks.
+\newblock IEEE INFOCOM ’07.
+
+\bibitem{Zhuang:05}
+S. Q. Zhuang, D. Geels, I. Stoica, and R. H. Katz.
+\newblock On Failure Detection Algorithms in Overlay Networks.
+\newblock In Proc. of IEEE INFOCOM, March 2005.
+
+\bibitem{Mizrak:05}
+A. T. Mizrak, Y.C. Cheng, K. Marzullo, and S. Savage.
+\newblock Fatih: Detecting and Isolating Malicious Routers.
+\newblock In Proc. of the IEEE Conference on Dependable Systems and Networks (DSN), June 2005.
+
+\bibitem{Avramopoulos:04}
+I. Avramopoulos, H. Kobayashi, R. Wang, and A. Krishnamurthy.
+\newblock Highly Secure and Efficient Routing.
+\newblock In Proc. of IEEE INFOCOM, March 2004.
+
 \end{thebibliography}
