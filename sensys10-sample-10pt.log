@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  29 AUG 2013 23:44
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  30 AUG 2013 00:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -429,10 +429,6 @@ Missing character: There is no ¤ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¤ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
@@ -449,6 +445,10 @@ Underfull \hbox (badness 1721) in paragraph at lines 94--97
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
@@ -458,14 +458,15 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
-) [6
+)
+[6
 
 ] (./sensys10-sample-10pt.aux) ) 
 Here is how much of TeX's memory you used:
- 2595 strings out of 493488
- 35278 string characters out of 3141326
- 97921 words of memory out of 3000000
- 5838 multiletter control sequences out of 15000+200000
+ 2596 strings out of 493488
+ 35290 string characters out of 3141326
+ 97925 words of memory out of 3000000
+ 5839 multiletter control sequences out of 15000+200000
  41924 words of font info for 82 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,10n,23p,866b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -479,7 +480,7 @@ a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><
 texlive/2012/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/20
 12/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sensys10-sample-10pt.pdf (6 pages, 305524 bytes).
+Output written on sensys10-sample-10pt.pdf (6 pages, 304874 bytes).
 PDF statistics:
  65 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream
