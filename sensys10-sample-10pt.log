@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  29 AUG 2013 19:57
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  29 AUG 2013 23:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -372,7 +372,17 @@ Overfull \hbox (11.9246pt too wide) in paragraph at lines 225--226
  [][] 
  []
 
-(./sensys10-sample-10pt.bbl
+<Fig5.jpg, id=22, 354.31487pt x 269.25372pt>
+File: Fig5.jpg Graphic file (type jpg)
+ <use Fig5.jpg>
+Package pdftex.def Info: Fig5.jpg used on input line 259.
+(pdftex.def)             Requested size: 252.94499pt x 192.21913pt.
+
+Overfull \hbox (11.9246pt too wide) in paragraph at lines 259--260
+ [][] 
+ []
+
+[4 <./Fig4.png> <./Fig5.jpg>] (./sensys10-sample-10pt.bbl
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
@@ -409,7 +419,6 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
- [4 <./Fig4.png>]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¤ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
@@ -420,6 +429,10 @@ Missing character: There is no ¤ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¤ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
@@ -445,28 +458,31 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
-) [5
+) [6
 
 ] (./sensys10-sample-10pt.aux) ) 
 Here is how much of TeX's memory you used:
- 2579 strings out of 493488
- 35148 string characters out of 3141326
- 96917 words of memory out of 3000000
- 5832 multiletter control sequences out of 15000+200000
- 37053 words of font info for 73 fonts, out of 3000000 for 9000
+ 2595 strings out of 493488
+ 35278 string characters out of 3141326
+ 97921 words of memory out of 3000000
+ 5838 multiletter control sequences out of 15000+200000
+ 41924 words of font info for 82 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,10n,23p,833b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,10n,23p,866b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/d
 vips/base/8r.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uh
-vb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pf
-b></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/lo
-cal/texlive/2012/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texliv
-e/2012/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sensys10-sample-10pt.pdf (5 pages, 210318 bytes).
+s/cm/cmmi10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvb8
+a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/
+texlive/2012/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/20
+12/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-d
+ist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on sensys10-sample-10pt.pdf (6 pages, 305524 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 65 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

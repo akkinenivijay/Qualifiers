@@ -120,4 +120,9 @@ I. Katzela, M. Schwartz.
 \newblock Schemes for fault identification in communication networks.
 \newblock IEEE/ACM Transactions on Networking, 3 (6) (1995), pp. 733–764.
 
+\bibitem{Pearl:98}
+Judea Pearl.
+\newblock Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference
+\newblock Morgan Kaufmann Publishers, San Mateo, CA (1988).
+
 \end{thebibliography}

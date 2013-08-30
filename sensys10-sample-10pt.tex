@@ -225,18 +225,45 @@ The edges are also labeled with conditional probabilities. Figure 4 represents s
     \includegraphics[width=0.5\textwidth]{Fig4}
 \end{figure}
 
-\section{Timeline of Project Proposal}
-Timeline:
+A lot of approaches using dependency graph, a critical assumption involves that an entity may fail in only one way. If that is the case the causal graph and dependecy graph would be the same.  In the case of multiple failures associated to a single entity they can be divided into sets such as {\it{complete failure, abnormal transmission delay, high packet loss, etc.}}. The dependecy graph in this case would have multiple edges between failure modes and the Object(entity). Sethi et all in \cite{Sethi:02}, \cite{Sethi:041}, \cite{Sethi:04} have modeled using multiple failure modes principle. 
+
+A fault localalization algorithm, based on the provided FPM generally returns a number of hypothesis that best explain the observed symptoms. The problem of finding best explanation of the recieved alarms is {\it{NP-hard}} problem and proved in \cite{Katzela:95} by reducing the given problem to a Min Set-Cover problem.
+
+\subsection{Divide and conquer algorithm}
+The divide and conquer algorith uses a FPM assuming that one type of failure is allowed per object. It is a window based technique i.e gathers all the faults in a time window and analyzes them. 
+
+System model is a directed graph G = ( E ,D) called the dependencygraph, where E is a finite nonempty set of active terminal objects e$_i$, and a directed edge (e$_i$, e$_j$) $\in$ D denotes the fact that a fault in e$_i$ has a side effect on e$_j$ i.e., e$_j$ is dependent on e$_i$.
+Each vertex e$_i$ is assigned a weight p$_i$ that is the probability that the object e$_i$ fails independently of the state (failed or not failed) of any other active terminal object that is dependent on it. Each directed edge ( e$_j$,e$_i$) is assigned a weight p$_{ji}$ which represents the strength of dependency between the entities it connects. Specifically, p$_{ji}$ , is the conditional probability p$_{ji}$ = P(e$_j$ fails\textbar e$_i$ fails) that entity e$_j$, fails as a result of the failure of entity e$_i$. In addition, the weight of a directed path is defined as the product of all the weights of the edges that compose the path. Finally, the strength of dependency p$_{kl}$ between two non-adjacent vertices e$_k$ and e$_l$, is defined as the maximum of the weights of all directed paths from e$_k$ to e$_l$.
+
+Let D(a$_i$) for every a$_i$ alarm be the domain of alarms that defines as the set of objects that might have caused the alarm.  The domain of an alarm calculation is a variation of single source problem that finds the min cost paths from a source vertex to all other graphs and the nodes are chosen such that the cost of path e$_i$ to e$_j$ is subject to restriction that we include only the minimum cost paths with cost $\leq$ log(W) where W is a parameter.
+
+The outline of the algorithm run has been given below.
+
 \begin{itemize}
-\item Research on infrastructure to generate application on multiple smart phones. ( 2 weeks)
-\item Enable Facebook Social Network based login for identity purpose. (1 week)
-\item Setting up cloud infrastructure and using a Map Reduced based Hbase NoSQL to store User data. (2 weeks)
-\item Integrating communication from the Application to the Cloud. (1 week)
-\item Rendering overlay of vehicles and traffic on the Map. ( 2 weeks)
-\item Experimenting with Kalman Filtering to predict state. (1 week)
+  \item Start with the set S of objects associated with the alarm cluster.
+  \item Find the partitioning of the set S resulting in two disjoint sets so in each set the objects exhibit the maximum mutual dependency, i.e., for every object e$_i$ and e$_j$, that belongs to the same set and e$_k$ that does not belong to the set, the dependency weight p$_{ij}$is greater than the dependency weights p$_{ik}$, p$_{ki}$, p$_{jk}$, p$_{kj}$.
+  \item Of the two sets, select the one that explains all the received alarms and has the maximum probability that at least one of the entities in the set is a fault. If there is no such set then find the subset of alarms that each set explains and select both.
+  \item Apply the previous two steps of the algorithm recursively to the selected sets until the resulting sets of the current partitioning are singletons.
 \end{itemize}
 
-\section{Conclusions and Future Work}
+By partitioning with the maximum mutual dependency criterion we group together objects that are highly dependent on each other and when the result of partitionining, both the sets are capable of explaingin all the alarms then we select one set that has higher probability of having one of them at fault. 
+
+When determining atleast on memeber of the subset is faulty it is calcualted using. 
+
+P(S) = ${\underset{\forall i:e_i \in S}{\sum}}[p_i + \underset{\forall j:e_j \in S , j \neq i}{\sum} p_{ij}.p_j]$
+
+
+\begin{figure}[h!]
+  \caption{Divide and Conquer algorithm \cite{Katzela:95}}
+  \centering
+    \includegraphics[width=0.5\textwidth]{Fig5}
+\end{figure}
+
+In algorithm runs in two phases where in the first phase algorithm finds the maximum mutual partitionings of the entities in the set S. The result of Phase I is a hierarchical clustering of the entities in the set S. In the Phase II a fault localization algorithm is recursively invoked to find the subsets that are supposed to be used. The first subcluster contains all alarms that may be explained using the subset with the higher probability that one of its members was a primary source of a failure. The second subcluster contains the remaining alarms from the original alarm cluster. Its domain is the other of the two subsets. The recursive procedure is then invoked twice, taking the two subclusters and their respective domains as parameters. The recursion continues until the input alarm cluster domain is a singleton. 
+
+The algorithm mentioned above gives the explanation of the observed alarms but may not prouce the best output as it is a approximation algorithm based on maximum mutual dependency heuristic. The runtime complexity of the algorithm is O(N$^{3}$) and the partitioning phase runtime is O(logN). The drawback of the algorithm is it cannot handle the lost or spurious alarms and is a time window based determinsitic algorithm.
+
+\subsection{Bayesian Reasoning approach}
  The Traffic Analyzer project was able to successfully track user movement and store them in a databse and render the traffic pattern on the maps. The project was able to meet the proposed requirements. There are still a lot of areas to improve in the project. The current polling based mechanism is very primitive and polling can still be improved with optimization methodologies and statistics driven approaches and the kalman filtering is currently is not producing accurate results. Kalman filtering can smooth data in the abscence of data. Further evaluation is needed in mapping solutions  whcih provide ease of drwaing overlays and integration with various other data sources apart from the sensors should be researched.  Project repo can be found at https://github.com/akkinenivijay/TrafficAnalyzer
 
 %\end{document} 
