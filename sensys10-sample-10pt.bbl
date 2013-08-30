@@ -140,4 +140,9 @@ S. Kliger, S. Yemini, Y. Yemini, D. Ohsie, S. Stolfo.
 \newblock A coding approach to event correlation.
 \newblock A.S. Sethi, F. Faure-Vincent, Y. Raynaud (Eds.), Integrated Network Management IV, Chapman and Hall, London (1995), pp. 266–277.
 
+\bibitem{Kandula:05}
+S. Kandula, D. Katabi, and J.P. Vasseur.
+\newblock Shrink: A Tool for Failure Diagnosis in IP Networks.
+\newblock In ACM SIGCOMM MineNet-05, Aug 2005.
+
 \end{thebibliography}

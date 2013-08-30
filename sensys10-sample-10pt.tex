@@ -280,6 +280,12 @@ The queries for belief assesment and most probable explanation are of particular
 $P(A_{max}) = max_A \underset{i=1}{\overset{n}{\pi}} P(V_i=v_i^A | Par(V_i)^A)$ \cite{Pearl:98}. \\
 It is known that the above tasks are NP-{\it hard} in the regular belief networks. A belief updating algorithm, polynomial with respect to $|$V$|$, is available for {\it polytrees}, i.e., directed graphs without undirected cycles. The exact calculation of the best explanatory hypothesis requires a number of steps that is exponential with respect to the number of graph nodes. One of the most popular exact algorithms bucket elimination is used as a reference algorithm against {\it iterative belief updating} algorithm and {\it iterative MPE query} algorithm.
 
+\begin{figure}[h!]
+  \caption{Bayesian Network message passing algorithm example}
+  \centering
+    \includegraphics[width=0.5\textwidth]{Fig7}
+\end{figure}
+
 The algorithms  utilizes a message passing schema in which BN nodes exchange messages that encode certain conditional probabilities. The message that node X sends to its parent V$_j$ for every valid V$_j$'s value v$_j$ is denoted by ${\lambda}_X(v_j)$. The message that node X sends to its child U$_i$ for every valid value of X, x, is denoted by ${\pi}_{U_i}(x)$. Messages ${\lambda}_X(v_j)$ and ${\pi}_{U_i}(x)$ are calculated by node X based on messages it receives from its neighbors using the following equations (where $\beta$ is any constant and $\alpha$ is a normalizing constant)
 \\
 based on messages the {\it bel(x)={$\alpha$}{$\lambda$}(x){$\pi$}(x)}.
@@ -308,11 +314,23 @@ However one limitation to the modeling of the domain as bayesian network is beca
 \end{table*}
 \end{center}
 
+\cite{Kandula:05} Shrink a tool for failrue diagnosis in IP Networks. Shrink outputs the most likely explanation for the network's faulty state i.e., the collection of SRLGs whose failure is most likely given the IP link status. Shrink works on three modules (1) building the bayesian model (2) augemnting the model with guess edges (3) inferring the most likely explanation.
+
 \begin{figure}[h!]
-  \caption{Bayesian Network message passing algorithm example}
+  \caption{Shrink system setup}
   \centering
-    \includegraphics[width=0.5\textwidth]{Fig7}
+    \includegraphics[width=0.5\textwidth]{Fig8}
 \end{figure}
+
+\begin{figure}[h!]
+  \caption{Shrink's network model}
+  \centering
+    \includegraphics[width=0.5\textwidth]{Fig9}
+\end{figure}
+
+if $E_k$ denotes the event that at most k SRLGs failed within any hour, there are exactly k combinations of n possible SRLG assignmentsthat satisfy $E_k$. Given the observed link status, shrink algorithm greedily picks the most likely SRLG assignment in $E_k$; i.e., it picks $(S_1,.....,Sn)$ $\in$ $\{0,1\}^n$ such that: \\
+$arg \underset{S_1,....,S_n}{max} P(S_1,.....,S_n|L_1,....L_n)$ subject to number of \{$S_i$=1\} $\leq$ k \\
+There are fewer than $n^k$ value assignments in $E_k$, and for each assignment $P(S_1,...,S_n|L_1,...,L_m)$ can be computed in O(m + n) time, where m is the number of IP links and n is the number of SRLGs. So, Shrink’s running time is O($n^k$ ∗(m+n)). K=3 is a valid case for a wide range of ISP network sizes and SRLG failure probabilities and when k$\geq$3 the hypothesis performance is worse. 
 
 \subsection{Misc approaches}
 
