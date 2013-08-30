@@ -264,11 +264,42 @@ In algorithm runs in two phases where in the first phase algorithm finds the max
 The algorithm mentioned above gives the explanation of the observed alarms but may not prouce the best output as it is a approximation algorithm based on maximum mutual dependency heuristic. The runtime complexity of the algorithm is O(N$^{3}$) and the partitioning phase runtime is O(logN). The drawback of the algorithm is it cannot handle the lost or spurious alarms and is a time window based determinsitic algorithm.
 
 \subsection{Bayesian Reasoning approach}
+Bayesian network or probabilistic graphical model represents a set of random varaibles and their conditional dependencies using a directed acyclic graph. In the context of fault localization the random variables represent the state of network entities and the occurrence of network events. 
 
+\begin{figure}[h!]
+  \caption{A example bayesian network}
+  \centering
+    \includegraphics[width=0.5\textwidth]{Fig6}
+\end{figure}
 
+Belief networks are used to make four basic queries given evidence set e: belief assessment, most probable explanation, maximum a posteriori hypothesis, and maximum expected utililty \cite{Pearl:98}
 
-%\end{document} 
+\cite{Cynthia:97}, \cite{Sethi:02}, \cite{Sethi:041} and \cite{Sethi:04} all the papers try to model the FPM as a bayesian network using a layered fault model apparoach and in general fault component models are divided into services, protocols and functions. The recursive dependencies between services, protocols and functions constitue a dependenct graph. Uncertainty about dependencies between communication system entities is represented by assigning probabilities to the links and/or nodes in the dependency or causality graph. 
 
+The queries for belief assesment and most probable explanation are of particular interest in the approaches mentioned above. The belief assesment task is to compute $bel(V_i=v_i) = P(V_i=v_i|e)$. given an evidence e, {\it bel}  gives the certainity of an event happening under the evidence. The most probable explanation task is to find an assignment that best explains the observed evidence e, i.e.,  \\
+$P(A_{max}) = max_A \underset{i=1}{\overset{n}{\pi}} P(V_i=v_i^A | Par(V_i)^A)$ \cite{Pearl:98}. \\
+It is known that the above tasks are NP-{\it hard} in the regular belief networks. A belief updating algorithm, polynomial with respect to $|$V$|$, is available for {\it polytrees}, i.e., directed graphs without undirected cycles. The exact calculation of the best explanatory hypothesis requires a number of steps that is exponential with respect to the number of graph nodes. One of the most popular exact algorithms bucket elimination is used as a reference algorithm against {\it iterative belief updating} algorithm and {\it iterative MPE query} algorithm.
+
+The algorithms  utilizes a message passing schema in which BN nodes exchange messages that encode certain conditional probabilities. The message that node X sends to its parent V$_j$ for every valid V$_j$'s value v$_j$ is denoted by ${\lambda}_X(v_j)$. The message that node X sends to its child U$_i$ for every valid value of X, x, is denoted by ${\pi}_{U_i}(x)$. Messages ${\lambda}_X(v_j)$ and ${\pi}_{U_i}(x)$ are calculated by node X based on messages it receives from its neighbors using the following equations (where $\beta$ is any constant and $\alpha$ is a normalizing constant)
+\\
+based on messages the {\it bel(x)={$\alpha$}{$\lambda$}(x){$\pi$}(x)}.
+
+The alogirthm proceeds in an event driven manner when a symptom is observed and applying a message passing iteration traversing the graph based on an order. Figure 7 shows an example bayesian network with fault nodes F$_1$, F$_2$, F$_3$. Once the algorithm ends every node is assigned a belief probability, the probability of its existence given the symptoms. The final hypothesis is chosen using the following heuristic: (1) a most-likely fault is chosen and placed in the final hypothesis, (2) the chosen fault node is considered a part of evidence, and (4) one iteration of message passing starting from the chosen fault node is performed. Steps (1)–(3) are repeated as long as (1) the posterior distribution contains fault nodes whose probability is greater than 0.5, and (2) unexplained negative symptoms remain. An inherent property of the adapted algorithm is the capability to isolate multiple simultaneous faults even if their symptoms overlap. 
+
+However one limitation to the modeling of the domain as bayesian network is because of the canonical models used in the literature mentioned above like noisy-OR gates, AND gates to limit the algorithm runtime to polynomial time. The comparision of different algorithms in bayesian networks is mentioned in the table below.
+
+\begin{table}[h]\footnotesize
+  \caption{Comparision of algorithms}
+  \begin{tabular}{| r | r || c | c | c |}
+      % ...
+  \end{tabular}
+\end{table}
+
+\begin{figure}[h!]
+  \caption{Bayesian Network message passing algorithm example}
+  \centering
+    \includegraphics[width=0.5\textwidth]{Fig7}
+\end{figure}
 \section{Evaluation}
 My evaluation criterion for the project depends on the goals I desired to achieve. The goal for me is to achieve A in this course, upon the delivery of the Mobile App communicating with cloud infrastructure and rendering of the data on Google Maps. This is the brunt of the project and requires significant effort. Enabling social integration and kalman filtering are additional characteristics. Overall I am happy with the learning outcome from this project as I learned both Android, IOS Systems and Map API's.
 
