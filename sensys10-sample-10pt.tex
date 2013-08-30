@@ -286,14 +286,27 @@ based on messages the {\it bel(x)={$\alpha$}{$\lambda$}(x){$\pi$}(x)}.
 
 The alogirthm proceeds in an event driven manner when a symptom is observed and applying a message passing iteration traversing the graph based on an order. Figure 7 shows an example bayesian network with fault nodes F$_1$, F$_2$, F$_3$. Once the algorithm ends every node is assigned a belief probability, the probability of its existence given the symptoms. The final hypothesis is chosen using the following heuristic: (1) a most-likely fault is chosen and placed in the final hypothesis, (2) the chosen fault node is considered a part of evidence, and (4) one iteration of message passing starting from the chosen fault node is performed. Steps (1)–(3) are repeated as long as (1) the posterior distribution contains fault nodes whose probability is greater than 0.5, and (2) unexplained negative symptoms remain. An inherent property of the adapted algorithm is the capability to isolate multiple simultaneous faults even if their symptoms overlap. 
 
-However one limitation to the modeling of the domain as bayesian network is because of the canonical models used in the literature mentioned above like noisy-OR gates, AND gates to limit the algorithm runtime to polynomial time. The comparision of different algorithms in bayesian networks is mentioned in the table below.
+However one limitation to the modeling of the domain as bayesian network is because of the canonical models used in the literature mentioned above like noisy-OR gates, AND gates to limit the algorithm runtime to polynomial time. The comparision of different algorithms in bayesian networks is mentioned in the table 1 below.
 
-\begin{table}[h]\footnotesize
-  \caption{Comparision of algorithms}
-  \begin{tabular}{| r | r || c | c | c |}
-      % ...
-  \end{tabular}
-\end{table}
+\begin{center}
+\begin{table*}[ht]
+{\small
+\hfill{}
+    \begin{tabular}{ | c | c | c | c |}
+    \hline
+    Algorithm & Bucket Elimination & Iterative Belief Updating & Iterative MPE \\ \hline
+    Theoretical Bound & $n^2$exp(n) & $n^5$ & $n^6$ \\ \hline
+    Detection Rate & 96-100\% & 93-98\% & 95-100\% \\ \hline
+    False Positive Rate & 0-4\% & 2-5\% & 0-8\% \\ \hline
+    Max Network Size & 10 & 50 & 25 \\ \hline
+    Algorithm iterative? & no & yes & yes \\
+    \hline
+    \end{tabular}}
+\hfill{}
+\caption{Comparision of algorithms}
+\label{tb:tablename}
+\end{table*}
+\end{center}
 
 \begin{figure}[h!]
   \caption{Bayesian Network message passing algorithm example}
