@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  31 AUG 2013 05:02
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  31 AUG 2013 05:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -542,7 +542,7 @@ Overfull \hbox (6.86848pt too wide) in paragraph at lines 479--480
 [9 <./Fig12.png>] <Fig14.png, id=54, 812.03375pt x 411.5375pt>
 File: Fig14.png Graphic file (type png)
  <use Fig14.png>
-Package pdftex.def Info: Fig14.png used on input line 488.
+Package pdftex.def Info: Fig14.png used on input line 487.
 (pdftex.def)             Requested size: 505.8843pt x 227.62108pt.
 
 (./sensys10-sample-10pt.bbl
@@ -663,7 +663,7 @@ ist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2012/texmf-dist/fonts/t
 ype1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on sensys10-sample-10pt.pdf (11 pages, 638177 bytes).
+Output written on sensys10-sample-10pt.pdf (11 pages, 638170 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  57 compressed objects within 1 object stream
