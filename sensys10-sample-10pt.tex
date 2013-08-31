@@ -364,7 +364,10 @@ When a particular node {\it $l_i$} lies on a bad path we do no know whether it i
 $\underset{i=1}{\overset{|N|}{\sum}} c_{l_i} Pr(node\ l_i\ is\ checked\ | \ nodes\ l_1,...,l_{i-1}\ known\ to\ be\ good)$ \\
 So the best node would be the first node in the diagnosis sequence and the inference works on the current topolgy to indetify this node and when the node is corrected the revised topology is fed into the inference algorithm to output the next node. The total complexity of calculating the expected cost of a diganosis sequence is O($n^3$) and since there are n! differenct sequences, the brute force approach has a complexity of O($n^3$n!). The complexity and the way to calculate the total cost for the diagnostic sequence is mentioned in Appendix A of \cite{pclee:07}. In the interest of space and lenth only the highights are being mentioned here.
 
- 
+{\bf Conditional Failure Probabilties}: the nodes in T by 1 to $|$N$|$ in breadth- first-search order. $T_i$ is the subtree rooted at node i. $C_i$ is the set such that k$\in$$C_i$ if node k is a   child node of {\it i}. thus conditional failure probability is given by bayesian probability rule where Pr($X_i$) is the independent failure probability of a node, and Pr($T_1$) is the probability of the tree is bad at root, $Pr(T_1|X_i)$ is the probability that a tree is a bad tree upon the event that a node is bad. \\
+$Pr(X_i|T_1) = \frac{Pr(T_1|X_i)Pr(X_i)}{Pr(T_1)}$ by baye's rule.\\
+where\\
+$Pr(T_i) = p_i+(1-p_i) \underset{k{\in}C_i}{\pi}Pr(T_k) , \forall i \in [1,|N|]$
 
 \appendix
 %\bibliographystyle{abbrv}
