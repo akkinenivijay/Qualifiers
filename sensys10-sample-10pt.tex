@@ -425,6 +425,70 @@ The optimality results that were presented in the paper drive the portential fun
 $E[cost\ of\ S_j|T ] - E[cost\ of\ S_k|T ]$ \\
  = $\frac{c_jc_kPr(W_{jk})Pr(X_j)Pr(X_k)}{Pr(T)}[-\phi(j,T)+\phi(k,T)] .... (*)$\\
 From (*) we can deduce that for expected cost of sequence starting with {\it j}  whoudl be no greater than that of {\it k} when  $\phi(j,T) \geq \phi(k,T)$, therefore the node with the highest potential should be checked first.
+
+{\bf Corollary 1}: Given a bad tree T which is a single path, the best node is the one with the maximum $\frac{p_i}{c_i(1-p_i)}$ .
+
+{\bf Proof of Corollary 1}:  $Pr(T |X_i,A_i) = 1$ for all i. Thus, the best node will be
+the only candidate node whose potential is $max_i$ $\frac{p_i}{c_i(1-p_i)}$
+
+{\bf Corollary 2}: Given a bad tree T, if every node i has $p_i$ = p and $c_i$ = c, where p and c are some fixed constants, then the best node is the root node of T.
+
+{\bf Proof of Corollary 2}: The above statement is true since the root node is the node with the highest conditional probability under this scenario.
+
+{\bf Corollary 3}: Consider a two-level tree T whose root node is attached to $|N|-1$ leaf nodes. If T is a bad tree and every node i has $c_i$ = c for some constant c, the best node is the one with the maximum conditional failure probability.
+
+{\bf Proof of Corollary 3}: If root node has the maximum conditional probability then for all leaf nodes we can show that $Pr(X_r|T) \geq Pr(X_i|T) \leftrightarrow \frac{p_r}{Pr(T)} \geq \frac{p_rp_i+(1-p_r) \underset{j{\neq}i}{\pi}p_j}{Pr(T)} \leftrightarrow \frac{p_r}{c(1-p_r)} \geq \frac{\underset{j{\neq}i}{\pi} p_j}{c(1-p_i)} \leftrightarrow \phi(r,T)\geq\phi(i,T)$ where $Pr(X_r|T)$ is the maximum conditional probability for failure of root node.  The above equations imply that root ndoe is the best candidate to check since it has the highest potential. 
+
+The second case for corollary 3 is when a non leaf node has the  maximum conditional probability and let $S^*$ is an optimal diagnosis sequence that doesnt start with k, so let $S^*$ = $(l_1,l_2,l_3,...k,l_{j+1},...,l_N)$. Here we need to show that moving node {\it k} to front doesnt increase the expected cost of $S^*$.
+\begin{itemize}
+  \item Case 1: Node $l_1$ is the root node r: Let $S^1$ =$(k,r,l_2,l_3,...l_{j-1},l_{j+1},...,l_N)$ all other nodes except the root and node {\it k} are checked in both the sequences and doesnt effect the outcome of this proof. so we can safely ignore them. We skip node {\it r}(resp {\it k}) in $S^1$ (resp $S^*$) and save cost c in $S^1$ and $S^*$. E[cost of $S^1|$T]-E[cost of $S^*|$T] = -cPr($\overline{X_r}|$T)+cPr($\overline{X_i}|$T) is maximum.
+\item Case 2: Node $l_1$ $\neq$ {\it r} is a leaf node: In $S^*$ let $l_2$ be the root node and when $l_1$ is checked all other leaf nodes potential drops to zero because of the conditional probability $p_i|p_{l_1}$ and root ndoe is the only candidate left. We can make similar argument  as case 1 with $S^2$ =$(k,r,l_2,l_3,...l_{j-1},l_{j+1},...,l_N)$
+\end{itemize}
+There exists a diagnosis sequence that starts with node k and has no greater expected cost than does $S^*$ , node k is a best node
+
+\subsection{Choosing a candidate node is difficult?}
+The authors have provided counter examples that violate the intuiton and why choosing a candidate node is difficult. 
+
+Counter-example 1: Given a bad tree, the best node is not the one with the highest potential.
+
+Counter-example 2: Checking simultaneously all candidate nodes in a bad tree does not minimize the expected cost of correcting all faulty nodes.
+
+Counter-example 3: The best node for a bad tree is not necessarily the best node for a subtree.
+
+Because of the above counter examples we can show that the problem cannot be solved by recursively solving the suboptimal solutions which is proved by counter example 3 and counter example 2 is a nice example of how conditional probabilites change once an information of a node whether it is good or bad is revealed. 
+
+\subsection{Evaluation of candidate based heuristics}
+
+The heuristics that have been experimented and results are obtained  are (1) {\it Cand-Prob} (2) {\it Cand -Cost} and (3) {\it Cand-Pot}. The three heuristics select the candidates based on the criteria of Cost, Probability and Potential. Results have shown that {\it Cand-Pot} has outperformed all other heuristics and produced results in 95\% of the cases.
+
+The potential of a node can be calulated in $O(|N|^2)$ time. However {\it Cand-Pot} which searches all the nodes for the one with highest potential and that would lead to a complexity of $O(|N|^3)$. This could lead to scalability issues when network grows, but generally only a subtree of network is bad so it is likely to be in a manageable size.
+
+\subsection {Heuristics for inference algorithm}
+Three different groups of efficient heuristics have been suggested for large scale networks. the heuristics belongs to one of these (1) naive heuristics which considers the maximum conditional probability (2) candiate based heuristics which considers both conditional failure probability and cost.
+
+Single Node Inference for a Single Tree chooses  two heuristics Naive-Prob and Cand-Pot. Multiple Node Inference for a Single Tree will try to check for multiple nodes in parallel to reduce the time needed to repair all the bad nodes. A parallel extension to naive-probability and cand-pot is given which returns the most likely subset of nodes that cover all the bad paths. They are names {\it Pa-Naive-Prob} and {\it Pa-Cand} respectively which returns subsets $I_{pnp}$ and $I_{pc}$ of faulty nodes that cover all the bad paths.  An algorithm in Figure 12 determines $I_{pnp}$ in $\theta(|N|)$ complexity. $I_{pnp} = argmax_I Pr(X_I|T )=argmax_I\underset{i\in I}{\pi}p_i$ since $Pr(T |X_I )$ is one.
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.49\textwidth]{Fig12}
+\end{figure}
+
+The algorithm of finding  $I_{pc}$ is shown in Figure 13, whose complexity is $\theta(|N|^3 )$ due to the search of candidate nodes.
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.49\textwidth]{Fig13}
+\end{figure}
+
+Multiple node inference for multiple trees involve which runs the inference algorithm on mutliple trees which form a directed acyclic graph. Since the problem of finsing nodes which best explains all the bad paths can be reduce to min set cover problem it is NP-{\it hard} and therefore we invoke {\it Mt-Pa-Naive-Prob and Mt-Pa-Cand} which internally invokes {\it Pa-Naive-Prob and Pa-Cand} on the each tree and the result in unioned. 
+
+Experiment results are presented in figure 14.
+
+
+\begin{figure*}
+  \includegraphics[width=\textwidth,height=8cm]{Fig14}
+  \caption{Comparison of Naive-Prob, Cand-Pot, Pa-Naive-Prob, and Pa-Cand in terms of the total checking cost}
+\end{figure*}
+
 \appendix
 %\bibliographystyle{abbrv}
 %\bibliography{sigproc}

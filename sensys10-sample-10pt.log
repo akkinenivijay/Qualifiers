@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  31 AUG 2013 02:34
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  31 AUG 2013 05:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -513,7 +513,39 @@ Missing character: There is no Â in font zptmcmr!
 Missing character: There is no · in font zptmcmr!
 Missing character: There is no Â in font zptmcmr!
 Missing character: There is no · in font zptmcmr!
-[8 <./Fig10.png> <./Fig11.png>] (./sensys10-sample-10pt.bbl
+[8 <./Fig10.png> <./Fig11.png>]
+Underfull \hbox (badness 2970) in paragraph at lines 444--445
+[]\OT1/ptm/m/n/10 Case 1: Node $\OML/ptmcm/m/it/10 l[]$ \OT1/ptm/m/n/10 is the 
+root node r: Let $\OML/ptmcm/m/it/10 S[]$
+ []
+
+<Fig12.png, id=49, 409.53pt x 348.30125pt>
+File: Fig12.png Graphic file (type png)
+ <use Fig12.png>
+Package pdftex.def Info: Fig12.png used on input line 473.
+(pdftex.def)             Requested size: 247.88887pt x 210.83185pt.
+
+Overfull \hbox (6.86848pt too wide) in paragraph at lines 473--474
+ [][] 
+ []
+
+<Fig13.png, id=50, 413.545pt x 197.73875pt>
+File: Fig13.png Graphic file (type png)
+ <use Fig13.png>
+Package pdftex.def Info: Fig13.png used on input line 479.
+(pdftex.def)             Requested size: 247.88887pt x 118.53252pt.
+
+Overfull \hbox (6.86848pt too wide) in paragraph at lines 479--480
+ [][] 
+ []
+
+[9 <./Fig12.png>] <Fig14.png, id=54, 812.03375pt x 411.5375pt>
+File: Fig14.png Graphic file (type png)
+ <use Fig14.png>
+Package pdftex.def Info: Fig14.png used on input line 488.
+(pdftex.def)             Requested size: 505.8843pt x 227.62108pt.
+
+(./sensys10-sample-10pt.bbl
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
@@ -535,6 +567,9 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
+
+Underfull \vbox (badness 1859) has occurred while \output is active []
+
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
@@ -579,41 +614,41 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ™ in font ptmr7t!
+ [10 <./Fig13.png>]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
-)
-[10
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
 
-] (./sensys10-sample-10pt.aux)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+) [11 <./Fig14.png>] (./sensys10-sample-10pt.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2667 strings out of 493488
- 36144 string characters out of 3141326
+ 2682 strings out of 493488
+ 36336 string characters out of 3141326
  100020 words of memory out of 3000000
- 5896 multiletter control sequences out of 15000+200000
+ 5908 multiletter control sequences out of 15000+200000
  53680 words of font info for 104 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,10n,23p,983b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -628,10 +663,10 @@ ist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2012/texmf-dist/fonts/t
 ype1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on sensys10-sample-10pt.pdf (10 pages, 523700 bytes).
+Output written on sensys10-sample-10pt.pdf (11 pages, 638177 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 95 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
