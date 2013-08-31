@@ -388,7 +388,7 @@ Where $T_{l_i}$ is the event that the subtree rooted at node $l_i$ is bad, and $
 $ Pr(node\ l_i\ is\ checked| T, nodes\ l_1,...,l_{i-1} known\ to\ be\ good)$ \\
 $=Pr({T_{l_i}}^D \cup \neg{{A_{l_i}}^D} | T)$\\
 Thus the expected cost of S given that T is a bad tree is: \\
-$ \underset{i=1}{\overset{n}{\sum}} c_{l_i} Pr({T_{l_i}}^D \cup \neg{{A_{l_i}}^D} | T)$\\
+\center$ \underset{i=1}{\overset{n}{\sum}} c_{l_i} Pr({T_{l_i}}^D \cup \neg{{A_{l_i}}^D} | T)$\\
 Brute force algorithm which inspects all the sequences is given in figure 10. This algorithm makes a good reference for comapring against the heuristic based ones.
 
 \begin{figure}[h!]
@@ -396,7 +396,6 @@ Brute force algorithm which inspects all the sequences is given in figure 10. Th
   \centering
     \includegraphics[width=0.5\textwidth]{Fig10}
 \end{figure}
-
 
 \subsection{Naive Heuristics for Inference Algorithm}
 Intuitively the best node returned by the inference algorithm can be either based on the highest conditional failure probabiltiy or checking cost.  The authors provided a simple counter example in which neither the selection of node based on conditional failure probability nor the one selected based on checking cost gave the optimal solution. The three heuristics authors chose naively are (1) {\it Naive_Prob} (2) {\it Naive_Cost} (3) {\it Naive_Prob_Cost} . Based on the experimental setup where a 200 bad trees are tested with the three heuristic mentioned above with varying probabiltiy and cost distributions. Depending on the distributions of $p_i$ and $c_i$, the proportion of instances where the best choice is made can be as low as 10\% for Naive-Prob and Naive-Cost  and less than 55\% for Naive-Prob-Cost.
@@ -407,7 +406,8 @@ Intuitively the best node returned by the inference algorithm can be either base
 \end{figure}
 
 \subsection{Candidate Node}
-The authors show that instead of selecting a node to test based on naive choices we should select a {\it candidate node} based on the maximization of a {\it potential function}. Let $A_i$ be the event that the ancestors of node {\it i} are all good. If node {\it r} is the root node, then we let $A_r$ be always true and $Pr(A_r) = 1$.
+The authors show that instead of selecting a node to test based on naive choices we should select a {\it candidate node} based on the maximization of a {\it potential function}. Let $A_i$ be the event that the ancestors of node {\it i} are all good. If node {\it r} is the root node, then we let $A_r$ be always true and $Pr(A_r) = 1$. The potential of a candidate node is calculated using the formula. \\
+                        \center $\phi({\it i,T)} = \frac{Pr(T|X_i,A_i)p_i}{c_i(1-p_i)}$
 \appendix
 %\bibliographystyle{abbrv}
 %\bibliography{sigproc}
