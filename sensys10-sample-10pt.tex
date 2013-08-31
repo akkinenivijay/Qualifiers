@@ -377,8 +377,37 @@ $Pr(T_i) = p_i+(1-p_i) \underset{k{\in}C_i}{\pi}Pr(T_k) , \forall i \in [1,|N|]$
    1       & \text{if } i=j \\
    p_i+(1-p_i)  \underset{k{\in}C_i}{\pi} Pr(T_k|X_j)  & \text{if } i<j
   \end{cases}
-\]
+\] \\
 
+The idea here is that a subtree $T_i$ is bad if either the node itself is bad or node {\it i} is good and the subtree rooted at {\it i} is bad. Using dyanmic programming the above equation can be computed in O($N^2$) which is the conditional failure probabitlity of a node. 
+
+{\bf Expected Cost of  a Diagnosis Sequence}: Let ${T_{l_i}}^D$ be the event that the subtree rooted at node ${l_i}$ is a bad tree after nodes ${{l_1},...,{l_{i-1}}}$ have been examined (i.e., checked or skipped). Let ${A_{l_i}}^D$ be the event that every ancestor j of node ${l_i}$, such that j $\in\{l_{i+1},...,l_{|N|}\}$ (i.e., node j is examined after node ${l_i}$), is a good node. Since every node is examined in a sequential way in the diagnosis sequence, when $l_i$ is examined, nodes $l_1,....,l_{i-1}$ have been examined and they are good. Thus, \\
+$Pr({T_{l_i}}^D) = Pr(T_{l_i}|p_{l_1}= ... = p_{l_{i-1}} = 0)$, and \\
+$Pr({A_{l_i}}^D) = Pr(A_{l_i}|p_{l_1}= ... = p_{l_{i-1}} = 0)$ \\
+Where $T_{l_i}$ is the event that the subtree rooted at node $l_i$ is bad, and $A_{l_i}$ is the event that all ancestors of node $l_i$ are good. If the subtree rooted at node $l_i$ remains a bad tree or at least one of the ancestors of node $l_i$ is a bad node, then node $l_i$ still lies on bad path and needs to be checked. Thus, \\
+$ Pr(node\ l_i\ is\ checked| T, nodes\ l_1,...,l_{i-1} known\ to\ be\ good)$ \\
+$=Pr({T_{l_i}}^D \cup \neg{{A_{l_i}}^D} | T)$\\
+Thus the expected cost of S given that T is a bad tree is: \\
+$ \underset{i=1}{\overset{n}{\sum}} c_{l_i} Pr({T_{l_i}}^D \cup \neg{{A_{l_i}}^D} | T)$\\
+Brute force algorithm which inspects all the sequences is given in figure 10. This algorithm makes a good reference for comapring against the heuristic based ones.
+
+\begin{figure}[h!]
+  \caption{Bruce Force Algorithm}
+  \centering
+    \includegraphics[width=0.5\textwidth]{Fig10}
+\end{figure}
+
+
+\subsection{Naive Heuristics for Inference Algorithm}
+Intuitively the best node returned by the inference algorithm can be either based on the highest conditional failure probabiltiy or checking cost.  The authors provided a simple counter example in which neither the selection of node based on conditional failure probability nor the one selected based on checking cost gave the optimal solution. The three heuristics authors chose naively are (1) {\it Naive_Prob} (2) {\it Naive_Cost} (3) {\it Naive_Prob_Cost} . Based on the experimental setup where a 200 bad trees are tested with the three heuristic mentioned above with varying probabiltiy and cost distributions. Depending on the distributions of $p_i$ and $c_i$, the proportion of instances where the best choice is made can be as low as 10\% for Naive-Prob and Naive-Cost  and less than 55\% for Naive-Prob-Cost.
+\begin{figure}[h!]
+  \caption{Naive-Prob, Naive-Cost, and Naive-Prob-Cost performance}
+  \centering
+    \includegraphics[width=0.5\textwidth]{Fig11}
+\end{figure}
+
+\subsection{Candidate Node}
+The authors show that instead of selecting a node to test based on naive choices we should select a {\it candidate node} based on the maximization of a {\it potential function}.
 \appendix
 %\bibliographystyle{abbrv}
 %\bibliography{sigproc}
