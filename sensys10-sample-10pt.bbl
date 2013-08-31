@@ -165,4 +165,34 @@ I. Avramopoulos, H. Kobayashi, R. Wang, and A. Krishnamurthy.
 \newblock Highly Secure and Efficient Routing.
 \newblock In Proc. of IEEE INFOCOM, March 2004.
 
+\bibitem{Avramopoulos:04}
+I. Avramopoulos, H. Kobayashi, R. Wang, and A. Krishnamurthy.
+\newblock Highly Secure and Efficient Routing.
+\newblock In Proc. of IEEE INFOCOM, March 2004.
+
+\bibitem{Ratnasamy:01}
+S. Ratnasamy, P. Francis, M. Handley, R. Karp, and S. Shenker.
+\newblock A Scalable Content-Addressable Network.
+\newblock In Proc. of ACM SIGCOMM, 2001.
+
+\bibitem{Stoica:01}
+I. Stoica, R. Morris, D. Karger, M. F. Kaashoek, and H. Balakrishnan.
+\newblock Chord: A Scalable Peer-To-Peer Lookup Service for Internet Applications.
+\newblock In Proc. of ACM SIGCOMM, 2001.
+
+\bibitem{Andersen:01}
+D. Andersen, H. Balakrishnan, F. Kaashoek, and R. Morris.
+\newblock Resilient Overlay Networks.
+\newblock In Proc. of the 18th ACM Symposium on Operating Systems Principles (SOSP), Oct 2001.
+
+\bibitem{Duan:03}
+Z. Duan, Z.-L. Zhang, and Y. Hou.
+\newblock Service Overlay Networks: SLAs, QoS, and Bandwidth Provisioning.
+\newblock IEEE/ACM Trans. on Networking, 11(6):870–883, Dec 2003.
+
+\bibitem{Misra:04}
+A. Keromytis, V. Misra, and D. Rubenstein.
+\newblock SOS: An Architecture for Mitigating DDoS Attacks.
+\newblock IEEE JSAC, Special Issue on Service Overlay Networks, 22(1), January 2004.
+
 \end{thebibliography}
