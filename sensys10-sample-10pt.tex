@@ -367,7 +367,17 @@ So the best node would be the first node in the diagnosis sequence and the infer
 {\bf Conditional Failure Probabilties}: the nodes in T by 1 to $|$N$|$ in breadth- first-search order. $T_i$ is the subtree rooted at node i. $C_i$ is the set such that k$\in$$C_i$ if node k is a   child node of {\it i}. thus conditional failure probability is given by bayesian probability rule where Pr($X_i$) is the independent failure probability of a node, and Pr($T_1$) is the probability of the tree is bad at root, $Pr(T_1|X_i)$ is the probability that a tree is a bad tree upon the event that a node is bad. \\
 $Pr(X_i|T_1) = \frac{Pr(T_1|X_i)Pr(X_i)}{Pr(T_1)}$ by baye's rule.\\
 where\\
-$Pr(T_i) = p_i+(1-p_i) \underset{k{\in}C_i}{\pi}Pr(T_k) , \forall i \in [1,|N|]$
+$Pr(T_i) = p_i+(1-p_i) \underset{k{\in}C_i}{\pi}Pr(T_k) , \forall i \in [1,|N|]$\\
+\\
+
+\[
+ Pr(T_i|X_j) =
+  \begin{cases}
+   Pr(T_i) & \text{if } i > j \\
+   1       & \text{if } i=j \\
+   p_i+(1-p_i)  \underset{k{\in}C_i}{\pi} Pr(T_k|X_j)  & \text{if } i<j
+  \end{cases}
+\]
 
 \appendix
 %\bibliographystyle{abbrv}
