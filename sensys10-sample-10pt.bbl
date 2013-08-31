@@ -195,4 +195,9 @@ A. Keromytis, V. Misra, and D. Rubenstein.
 \newblock SOS: An Architecture for Mitigating DDoS Attacks.
 \newblock IEEE JSAC, Special Issue on Service Overlay Networks, 22(1), January 2004.
 
+\bibitem{pclee:06}
+P. P. C. Lee, V. Misra, and D. Rubenstein.
+\newblock Toward Optimal Network Fault Correction via End-to-End Inference.
+\newblock Computer Science Technical Report, Columbia University, May 2006.
+
 \end{thebibliography}
