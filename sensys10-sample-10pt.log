@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  31 AUG 2013 01:36
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  31 AUG 2013 02:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -481,11 +481,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 380--381
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 384--391
-
- []
-
 <Fig10.png, id=43, 411.5375pt x 160.6pt>
 File: Fig10.png Graphic file (type png)
  <use Fig10.png>
@@ -506,7 +501,19 @@ Overfull \hbox (11.9246pt too wide) in paragraph at lines 405--406
  [][] 
  []
 
-(./sensys10-sample-10pt.bbl
+Missing character: There is no Â in font zptmcmr!
+Missing character: There is no · in font zptmcmr!
+Missing character: There is no Â in font zptmcmr!
+Missing character: There is no · in font zptmcmr!
+Missing character: There is no Â in font zptmcmr!
+Missing character: There is no · in font zptmcmr!
+Missing character: There is no Â in font zptmcmr!
+Missing character: There is no · in font zptmcmr!
+Missing character: There is no Â in font zptmcmr!
+Missing character: There is no · in font zptmcmr!
+Missing character: There is no Â in font zptmcmr!
+Missing character: There is no · in font zptmcmr!
+[8 <./Fig10.png> <./Fig11.png>] (./sensys10-sample-10pt.bbl
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
@@ -528,7 +535,6 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
- [8 <./Fig10.png> <./Fig11.png>]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
@@ -585,13 +591,20 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
-) [9] (./sensys10-sample-10pt.aux)
+)
+[10
+
+] (./sensys10-sample-10pt.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -615,10 +628,10 @@ ist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2012/texmf-dist/fonts/t
 ype1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on sensys10-sample-10pt.pdf (9 pages, 520264 bytes).
+Output written on sensys10-sample-10pt.pdf (10 pages, 523700 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 89 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

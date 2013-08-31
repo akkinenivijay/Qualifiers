@@ -388,7 +388,7 @@ Where $T_{l_i}$ is the event that the subtree rooted at node $l_i$ is bad, and $
 $ Pr(node\ l_i\ is\ checked| T, nodes\ l_1,...,l_{i-1} known\ to\ be\ good)$ \\
 $=Pr({T_{l_i}}^D \cup \neg{{A_{l_i}}^D} | T)$\\
 Thus the expected cost of S given that T is a bad tree is: \\
-\center$ \underset{i=1}{\overset{n}{\sum}} c_{l_i} Pr({T_{l_i}}^D \cup \neg{{A_{l_i}}^D} | T)$\\
+$ \underset{i=1}{\overset{n}{\sum}} c_{l_i} Pr({T_{l_i}}^D \cup \neg{{A_{l_i}}^D} | T)$\\
 Brute force algorithm which inspects all the sequences is given in figure 10. This algorithm makes a good reference for comapring against the heuristic based ones.
 
 \begin{figure}[h!]
@@ -407,7 +407,24 @@ Intuitively the best node returned by the inference algorithm can be either base
 
 \subsection{Candidate Node}
 The authors show that instead of selecting a node to test based on naive choices we should select a {\it candidate node} based on the maximization of a {\it potential function}. Let $A_i$ be the event that the ancestors of node {\it i} are all good. If node {\it r} is the root node, then we let $A_r$ be always true and $Pr(A_r) = 1$. The potential of a candidate node is calculated using the formula. \\
-                        \center $\phi({\it i,T)} = \frac{Pr(T|X_i,A_i)p_i}{c_i(1-p_i)}$
+                     $\phi({\it i,T)} = \frac{Pr(T|X_i,A_i)p_i}{c_i(1-p_i)}$
+
+Intuitively the candidate node should have low conditaional failure probability and low checking cost and a higher likelihood of having a bad tree with respect to tree topology. The potential of node {\it i} can be obtained by first computing $Pr(T |X_i , A_i ) = Pr(T | p_i = 1, p_j = 0 \forall j \in A_i )$, where $A_i$ is the set of ancestors of node i. and the time complexity of comuting is O($|N|^3$) For each path W in a tree T we select node {\it i} that has the highest potential $\phi({\it i},T)$ among all the nodes. In case of a tie we choose the one closest to the root.
+
+\subsection{Optimality Results}
+The optimality results that were presented in the paper drive the portential function definition provided above. 
+
+{\bf Theorem 1}: Given a bad tree T, there always exists an optimal diagnosis sequence that starts with a candidate node.
+
+{\bf Proof of Theorem 1}: Consider two diagnosis sequences $S_j = (j,k,l_3,···,l_{|N|})\ and\ S_k = (k, j, l_3, · · · , l_{|N|})$. Now two scenarios crop up (1) when {\it j} and {\it k} are ancestrally related i.e they are on the same path and (2) when {\it j} and {\it k} are on two different paths.  In the second case when they are unrelated they have no impact on each other. thus $S_j$ and $S_k$ will have the same cost.  When  {\it j} and {\it k} are ancestrally related checking node {\it j} (resp {\it k}) if it reveals a good path then {\it k} (resp {\it j}) can be skipped checking and save $c_k$ (resp $c_j$). But to validate the given statement we need certain conditions to hold good.
+\begin{itemize}
+  \item node {\it j} (resp. {\it k}) is bad.
+  \item node {\it k} (resp. {\it j}) is good.
+  \item there exists a path $W_{jk}$ containing nodes {\it j} and {\it k} such that all nodes other than nodes {\it j} and {\it k} on $W_{jk}$ are good.
+\end{itemize} Thus,
+$E[cost\ of\ S_j|T ] - E[cost\ of\ S_k|T ]$ \\
+ = $\frac{c_jc_kPr(W_{jk})Pr(X_j)Pr(X_k)}{Pr(T)}[-\phi(j,T)+\phi(k,T)] .... (*)$\\
+From (*) we can deduce that for expected cost of sequence starting with {\it j}  whoudl be no greater than that of {\it k} when  $\phi(j,T) \geq \phi(k,T)$, therefore the node with the highest potential should be checked first.
 \appendix
 %\bibliographystyle{abbrv}
 %\bibliography{sigproc}
