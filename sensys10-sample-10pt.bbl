@@ -245,4 +245,34 @@ N. Duffield.
 \newblock Network Tomography of Binary Network Performance Characteristics.
 \newblock IEEE Trans. Information Theory, vol. 52, no. 12, pp. 5373-5388, Dec. 2006.
 
+\bibitem{Pandit:07}
+V.T. Chakaravarthy, V. Pandit, S. Roy, P. Awasthi, and M. Mohania.
+\newblock Decision Trees for Entity Identification: Approximation Algorithms and Hardness Results.
+\newblock Proc. 26th ACM SIGMOD- SIGACT-SIGART Symp. Principles of Database Systems, 2007.
+
+\bibitem{Adler:08}
+M. Adler and B. Heeringa.
+\newblock Approximating Optimal Binary Decision Trees.
+\newblock Proc. Int’l Workshop Approximation, Randomization and Combinatorial Optimization: Algorithms and Techniques (APPROX/RANDOM ’08), Aug. 2008.
+
+\bibitem{Garey:72}
+M.R. Garey.
+\newblock Optimal Binary Identification Procedures.
+\newblock SIAM J. Applied Math., vol. 23, no. 2, pp. 173-186, Sept. 1972.
+
+\bibitem{Krishna:09}
+B. Wang, W. Wei, W. Zeng, and K.R. Pattipati.
+\newblock Fault Localization Using Passive End-to-End Measurement and Sequential Testing for Wireless Sensor Networks.
+\newblock Proc. Ann. IEEE Comm. Soc. Conf. Sensor, Mesh and Ad Hoc Comm. and Networks (SECON), June 2009.
+
+\bibitem{West:00}
+D.B. West.
+\newblock Introduction to Graph Theory.
+\newblock second ed. Prentice Hall, Sept. 2000.
+
+\bibitem{Nguyen:06}
+H.X. Nguyen and P. Thiran.
+\newblock Using End-to-End Data to Infer Lossy Links in Sensor Networks.
+\newblock Proc. IEEE INFOCOM, Apr. 2006.
+
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  1 SEP 2013 02:31
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  1 SEP 2013 12:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -354,34 +354,34 @@ Overfull \hbox (11.9246pt too wide) in paragraph at lines 142--143
 File: Fig3.png Graphic file (type png)
 
 <use Fig3.png>
-Package pdftex.def Info: Fig3.png used on input line 201.
+Package pdftex.def Info: Fig3.png used on input line 196.
 (pdftex.def)             Requested size: 252.94499pt x 94.5225pt.
 
-Overfull \hbox (11.9246pt too wide) in paragraph at lines 201--202
+Overfull \hbox (11.9246pt too wide) in paragraph at lines 196--197
  [][] 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 221.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 215.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 221.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 215.
 [3 <./Fig3.png>] <Fig4.png, id=20, 669.50125pt x 482.80376pt>
 File: Fig4.png Graphic file (type png)
  <use Fig4.png>
-Package pdftex.def Info: Fig4.png used on input line 227.
+Package pdftex.def Info: Fig4.png used on input line 221.
 (pdftex.def)             Requested size: 252.94499pt x 182.40648pt.
 
-Overfull \hbox (11.9246pt too wide) in paragraph at lines 227--228
+Overfull \hbox (11.9246pt too wide) in paragraph at lines 221--222
  [][] 
  []
 
 <Fig5.jpg, id=21, 354.31487pt x 269.25372pt>
 File: Fig5.jpg Graphic file (type jpg)
  <use Fig5.jpg>
-Package pdftex.def Info: Fig5.jpg used on input line 261.
+Package pdftex.def Info: Fig5.jpg used on input line 255.
 (pdftex.def)             Requested size: 252.94499pt x 192.21913pt.
 
-Overfull \hbox (11.9246pt too wide) in paragraph at lines 261--262
+Overfull \hbox (11.9246pt too wide) in paragraph at lines 255--256
  [][] 
  []
 
@@ -391,53 +391,59 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [4 <./Fig4.png>] <Fig6.jpg, id=29, 168.20363pt x 98.49185pt>
 File: Fig6.jpg Graphic file (type jpg)
  <use Fig6.jpg>
-Package pdftex.def Info: Fig6.jpg used on input line 274.
+Package pdftex.def Info: Fig6.jpg used on input line 268.
 (pdftex.def)             Requested size: 252.94499pt x 148.11159pt.
 
-Overfull \hbox (11.9246pt too wide) in paragraph at lines 274--275
+Overfull \hbox (11.9246pt too wide) in paragraph at lines 268--269
  [][] 
  []
 
 <Fig7.jpg, id=30, 270.53284pt x 381.17628pt>
 File: Fig7.jpg Graphic file (type jpg)
  <use Fig7.jpg>
-Package pdftex.def Info: Fig7.jpg used on input line 288.
+Package pdftex.def Info: Fig7.jpg used on input line 282.
 (pdftex.def)             Requested size: 252.94499pt x 356.39218pt.
 
-Overfull \hbox (11.9246pt too wide) in paragraph at lines 288--289
+Overfull \hbox (11.9246pt too wide) in paragraph at lines 282--283
  [][] 
  []
 
-[5 <./Fig5.jpg> <./Fig6.jpg> <./Fig7.jpg>]
+
+Underfull \vbox (badness 3601) has occurred while \output is active []
+
+ [5 <./Fig5.jpg> <./Fig6.jpg> <./Fig7.jpg>]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 303.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 297.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 303.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 297.
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no – in font ptmr7t!
-
-<Fig8.png, id=34, 354.32375pt x 86.3225pt>
+ <Fig8.png, id=34, 354.32375pt x 86.3225pt>
 File: Fig8.png Graphic file (type png)
- <use Fig8.png>
-Package pdftex.def Info: Fig8.png used on input line 324.
+
+<use Fig8.png>
+Package pdftex.def Info: Fig8.png used on input line 318.
 (pdftex.def)             Requested size: 252.94499pt x 61.62526pt.
 
-Overfull \hbox (11.9246pt too wide) in paragraph at lines 324--325
+Overfull \hbox (11.9246pt too wide) in paragraph at lines 318--319
  [][] 
  []
 
 <Fig9.png, id=35, 362.35374pt x 150.5625pt>
 File: Fig9.png Graphic file (type png)
  <use Fig9.png>
-Package pdftex.def Info: Fig9.png used on input line 330.
+Package pdftex.def Info: Fig9.png used on input line 324.
 (pdftex.def)             Requested size: 252.94499pt x 105.10355pt.
 
-Overfull \hbox (11.9246pt too wide) in paragraph at lines 330--331
+Overfull \hbox (11.9246pt too wide) in paragraph at lines 324--325
  [][] 
  []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
@@ -446,7 +452,7 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no ˆ in font ptmr7t!
 Missing character: There is no — in font ptmr7t!
 
-Underfull \hbox (badness 6758) in paragraph at lines 333--336
+Underfull \hbox (badness 6758) in paragraph at lines 327--330
 \OML/ptmcm/m/it/10 arg[]P\OT1/ptmcm/m/n/10 (\OML/ptmcm/m/it/10 S[]; :::::; S[]\
 OMS/pzccm/m/n/10 j\OML/ptmcm/m/it/10 L[]; ::::L[]\OT1/ptmcm/m/n/10 )$ \OT1/ptm/
 m/n/10 sub-ject to num-ber of
@@ -457,19 +463,19 @@ Missing character: There is no ï in font ptmr7t!
 Missing character: There is no ¿ in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
 
-Overfull \hbox (9.95486pt too wide) in paragraph at lines 363--366
+Overfull \hbox (12.72476pt too wide) in paragraph at lines 357--360
 []\OML/ptmcm/m/it/10 c[]Pr\OT1/ptmcm/m/n/10 (\OML/ptmcm/m/it/10 node l[] is che
 cked \OMS/pzccm/m/n/10 j \OML/ptmcm/m/it/10 nodes l[]; :::; l[] known to be goo
-d\OT1/ptmcm/m/n/10 )$ 
+d\OT1/ptmcm/m/n/10 )\OML/ptmcm/m/it/10 :$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--372
+Underfull \hbox (badness 10000) in paragraph at lines 361--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--372
+Underfull \hbox (badness 10000) in paragraph at lines 361--366
 
  []
 
@@ -477,27 +483,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 367--372
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-Underfull \hbox (badness 10000) in paragraph at lines 380--381
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
 
  []
 
 <Fig10.png, id=43, 411.5375pt x 160.6pt>
 File: Fig10.png Graphic file (type png)
  <use Fig10.png>
-Package pdftex.def Info: Fig10.png used on input line 397.
+Package pdftex.def Info: Fig10.png used on input line 391.
 (pdftex.def)             Requested size: 252.94499pt x 98.71082pt.
 
-Overfull \hbox (11.9246pt too wide) in paragraph at lines 397--398
+Overfull \hbox (11.9246pt too wide) in paragraph at lines 391--392
  [][] 
  []
 
 <Fig11.png, id=44, 826.08624pt x 210.7875pt>
 File: Fig11.png Graphic file (type png)
  <use Fig11.png>
-Package pdftex.def Info: Fig11.png used on input line 405.
+Package pdftex.def Info: Fig11.png used on input line 399.
 (pdftex.def)             Requested size: 252.94499pt x 64.54257pt.
 
-Overfull \hbox (11.9246pt too wide) in paragraph at lines 405--406
+Overfull \hbox (11.9246pt too wide) in paragraph at lines 399--400
  [][] 
  []
 
@@ -514,7 +520,7 @@ Missing character: There is no · in font zptmcmr!
 Missing character: There is no Â in font zptmcmr!
 Missing character: There is no · in font zptmcmr!
 [8 <./Fig10.png> <./Fig11.png>]
-Underfull \hbox (badness 2970) in paragraph at lines 444--445
+Underfull \hbox (badness 2970) in paragraph at lines 438--439
 []\OT1/ptm/m/n/10 Case 1: Node $\OML/ptmcm/m/it/10 l[]$ \OT1/ptm/m/n/10 is the 
 root node r: Let $\OML/ptmcm/m/it/10 S[]$
  []
@@ -522,30 +528,30 @@ root node r: Let $\OML/ptmcm/m/it/10 S[]$
 <Fig12.png, id=49, 409.53pt x 348.30125pt>
 File: Fig12.png Graphic file (type png)
  <use Fig12.png>
-Package pdftex.def Info: Fig12.png used on input line 473.
+Package pdftex.def Info: Fig12.png used on input line 467.
 (pdftex.def)             Requested size: 247.88887pt x 210.83185pt.
 
-Overfull \hbox (6.86848pt too wide) in paragraph at lines 473--474
+Overfull \hbox (6.86848pt too wide) in paragraph at lines 467--468
  [][] 
  []
 
 <Fig13.png, id=50, 413.545pt x 197.73875pt>
 File: Fig13.png Graphic file (type png)
  <use Fig13.png>
-Package pdftex.def Info: Fig13.png used on input line 479.
+Package pdftex.def Info: Fig13.png used on input line 473.
 (pdftex.def)             Requested size: 247.88887pt x 118.53252pt.
 
-Overfull \hbox (6.86848pt too wide) in paragraph at lines 479--480
+Overfull \hbox (6.86848pt too wide) in paragraph at lines 473--474
  [][] 
  []
 
 [9 <./Fig12.png>] <Fig14.png, id=54, 812.03375pt x 411.5375pt>
 File: Fig14.png Graphic file (type png)
  <use Fig14.png>
-Package pdftex.def Info: Fig14.png used on input line 494.
+Package pdftex.def Info: Fig14.png used on input line 488.
 (pdftex.def)             Requested size: 505.8843pt x 227.62108pt.
 
-Underfull \hbox (badness 1584) in paragraph at lines 499--499
+Underfull \hbox (badness 1584) in paragraph at lines 493--493
 \OT1/ptm/b/n/12 end-to-end mea-sure-ments and se-quen-tial
  []
 
@@ -553,10 +559,10 @@ Underfull \hbox (badness 1584) in paragraph at lines 499--499
 File: Fig15.png Graphic file (type png)
 
 <use Fig15.png>
-Package pdftex.def Info: Fig15.png used on input line 530.
+Package pdftex.def Info: Fig15.png used on input line 524.
 (pdftex.def)             Requested size: 252.94499pt x 185.33633pt.
 
-Overfull \hbox (11.9246pt too wide) in paragraph at lines 530--531
+Overfull \hbox (11.9246pt too wide) in paragraph at lines 524--525
  [][] 
  []
 
@@ -566,10 +572,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <Fig16.png, id=59, 288.07625pt x 164.615pt>
 File: Fig16.png Graphic file (type png)
  <use Fig16.png>
-Package pdftex.def Info: Fig16.png used on input line 541.
+Package pdftex.def Info: Fig16.png used on input line 535.
 (pdftex.def)             Requested size: 252.94499pt x 144.54515pt.
 
-Overfull \hbox (11.9246pt too wide) in paragraph at lines 541--542
+Overfull \hbox (11.9246pt too wide) in paragraph at lines 535--536
  [][] 
  []
 
@@ -579,10 +585,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <Fig17.png, id=60, 325.215pt x 248.93pt>
 File: Fig17.png Graphic file (type png)
  <use Fig17.png>
-Package pdftex.def Info: Fig17.png used on input line 547.
+Package pdftex.def Info: Fig17.png used on input line 541.
 (pdftex.def)             Requested size: 252.94499pt x 193.61765pt.
 
-Overfull \hbox (11.9246pt too wide) in paragraph at lines 547--548
+Overfull \hbox (11.9246pt too wide) in paragraph at lines 541--542
  [][] 
  []
 
@@ -593,10 +599,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Fig18.png Graphic file (type png)
 
 <use Fig18.png>
-Package pdftex.def Info: Fig18.png used on input line 561.
+Package pdftex.def Info: Fig18.png used on input line 555.
 (pdftex.def)             Requested size: 252.94499pt x 169.35106pt.
 
-Overfull \hbox (11.9246pt too wide) in paragraph at lines 561--562
+Overfull \hbox (11.9246pt too wide) in paragraph at lines 555--556
  [][] 
  []
 
@@ -607,6 +613,34 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Underfull \vbox (badness 4595) has occurred while \output is active []
 
 
+Underfull \hbox (badness 3492) in paragraph at lines 566--567
+[]\OT1/ptm/m/n/10 The per-for-mance of both the heuris-tics are be-ing
+ []
+
+<Fig19.png, id=65, 389.455pt x 195.73125pt>
+File: Fig19.png Graphic file (type png)
+ <use Fig19.png>
+Package pdftex.def Info: Fig19.png used on input line 571.
+(pdftex.def)             Requested size: 252.94499pt x 127.12225pt.
+
+Overfull \hbox (11.9246pt too wide) in paragraph at lines 571--572
+ [][] 
+ []
+
+<Fig20.png, id=66, 407.5225pt x 197.73875pt>
+File: Fig20.png Graphic file (type png)
+ <use Fig20.png>
+Package pdftex.def Info: Fig20.png used on input line 577.
+(pdftex.def)             Requested size: 252.94499pt x 122.73555pt.
+
+Overfull \hbox (11.9246pt too wide) in paragraph at lines 577--578
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[12 <./Fig16.png> <./Fig17.png> <./Fig18.png> <./Fig19.png>]
 (./sensys10-sample-10pt.bbl
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
@@ -617,10 +651,6 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
-
-Underfull \vbox (badness 1365) has occurred while \output is active []
-
- [12 <./Fig16.png> <./Fig17.png> <./Fig18.png>]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
@@ -671,6 +701,31 @@ Underfull \hbox (badness 1721) in paragraph at lines 94--97
 \OT1/ptm/m/n/10 er-a-tions and Man-age-ment, Uni-ver-sity of Delaware,
  []
 
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13 <./Fig20.png>]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -679,31 +734,6 @@ Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ™ in font ptmr7t!
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
@@ -714,17 +744,26 @@ Missing character: There is no ™ in font ptmr7t!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-) [14]
-(./sensys10-sample-10pt.aux)
+ [14]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+)
+[15
+
+] (./sensys10-sample-10pt.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2713 strings out of 493488
- 36700 string characters out of 3141326
- 100060 words of memory out of 3000000
- 5934 multiletter control sequences out of 15000+200000
+ 2729 strings out of 493488
+ 36891 string characters out of 3141326
+ 100084 words of memory out of 3000000
+ 5948 multiletter control sequences out of 15000+200000
  54787 words of font info for 105 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,10n,23p,1383b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -739,10 +778,10 @@ ist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2012/texmf-dist/fonts/t
 ype1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on sensys10-sample-10pt.pdf (14 pages, 702967 bytes).
+Output written on sensys10-sample-10pt.pdf (15 pages, 750054 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 114 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
