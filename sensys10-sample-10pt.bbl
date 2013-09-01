@@ -233,6 +233,16 @@ J. Zhao, R. Govindan, and D. Estrin.
 \bibitem{Zhao:03}
 J. Zhao, R. Govindan, and D. Estrin.
 \newblock Computing Aggregates for Monitoring Wireless Sensor Networks.
-\newblock roc. IEEE Int’l Workshop Sensor Network Protocols and Applications (SNPA), May 2003.
+\newblock Proc. IEEE Int’l Workshop Sensor Network Protocols and Applications (SNPA), May 2003.
+
+\bibitem{Hsin:02}
+C.F. Hsin and M. Liu.
+\newblock A Distributed Monitoring Mechanism for Wireless Sensor Networks.
+\newblock Proc. First ACM Workshop Wireless Security (WiSe), Sept. 2002.
+
+\bibitem{Duff:06}
+N. Duffield.
+\newblock Network Tomography of Binary Network Performance Characteristics.
+\newblock IEEE Trans. Information Theory, vol. 52, no. 12, pp. 5373-5388, Dec. 2006.
 
 \end{thebibliography}

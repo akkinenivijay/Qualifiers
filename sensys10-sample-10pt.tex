@@ -495,16 +495,44 @@ same for cases where inaccurate failure probabilities are calculated.
   \caption{Comparison of Naive-Prob, Cand-Pot, Pa-Naive-Prob, and Pa-Cand in terms of the total checking cost}
 \end{figure*}
 
-\section{Paper2: Fault Localization using passive end-to-end measurements and
+\section{Paper 2: Fault Localization using passive end-to-end measurements and
 sequential testing for wireless sensor networks}
 Sensor networks are deployed widely and deployed network my have failures from faults like nodes not functioning properly or lossy links\cite{Ramanathan:05} \cite{Tolle:05}, These could have tremendous impact on the network operations and needs to be detected, localized and tested(corrected). Many existing studies have used active measurements to passive measurements for the problem of fault localization \cite{Ramanathan:05} . However active measurements need constant monitoring of network and probing nodes to get their current status, reporting status to centralized or monitoring points this impact the network severely and may cause the energy of the network to go down. For a more stringent energy requirements    
 passive end-to-end measurement proved to be a good for fault localization as it introduces no additional traffic. \cite{krishna:12} paper2 mainly focuses on how active and passive measurements can mutually help each other to reduce the  ambiguity in indentifying the faulty nodes and output an optimal diagnosis sequence which is guided by the end-to-end data. The usage of end-to-end data for fault localization is a concept we are familiar in Paper 1 \cite{pclee:07} but later int he section we explain the key differences between the approaches and how paper 2 \cite{krishna:12} outperforms paper 1 though it is based on sensor networks prove to be very good for wired networks too.
 
 The concept at a 10000ft level is to pick a component to test based on end-to-end passive measurements and and test the component and determine the next component to be tested. This testing procedure continues till all faults have explained the anamolous behaviours in the end-to-end observed data. We perform this procedure recursively till we find all the faults in the network. The problem is an NP-{\it hard} to find out the optimal testing sequence and is proved in \cite{krishna:12}.
 
-In this section past research work in the area of fault localization in sensor networks have been presented.  \cite{Zhao:02}, \cite{Zhao:03}  two papers from Zhao et all presents how active measurements can provide accurate view of the network and desing a residual energy scan of a sensor network which depicts the remaining energy in the system \cite{Zhao:02} and \cite{Zhao:03} computes aggregates liek sum, average, count of network properties ie loss rates and energy levels etc. 
+In this section past research work in the area of fault localization in sensor networks have been presented.  \cite{Zhao:02}, \cite{Zhao:03}  two papers from Zhao et all presents how active measurements can provide accurate view of the network and desing a residual energy scan of a sensor network which depicts the remaining energy in the system \cite{Zhao:02} and \cite{Zhao:03} computes aggregates like sum, average, count of network properties ie loss rates and energy levels etc. \cite{Hsin:02} have proposed distributed monitoring of nodes and \cite{Tolle:05} SNMS ( sensor network management system) which can query the health of various components. The same authors \cite{Tolle:06} proposed {\it Marionette} which is an extension of SNMS and can read attributes. Simillary \cite{Ramanathan:05} and \cite{Rost:06} have proposed {\it Sympathy} and {\it Memento} are tools that have capabilities of detecting node failure and state summary of a node. Paper 2 differs from the existing studies as it combines active and passive measurements to detect the faulty behaviour. The closest study to the Paper 2 are Paper1\cite{pclee:07} and \cite{Duff:06}, which is based on network tomography and inferring performance characteristics from of the network by correlating the end-to-end measurements and identify failures during this process. 
 
+\subsection{Problem Setting}
+In this paper the primary faults that are dealt in sensor networks are {\it lossy links} and in particular {\it persistent} lossy links that are used in routing and {\it transient} lossy linsk are not considered. The assumptions that are made in the problem setting are:
 
+\begin{itemize}
+  \item The data packets that are transmitted form source to sink are of the same size as different size of packets can experience different loss rates.
+  \item Link is good or bad depends if the average reception rate is above or below a particular threshold $t_l$.
+  \item Threshold $t_l$ clearly seperates good link from bad link.
+  \item Losses at diferent links are independent of each other. 
+  \item If a link is  good it is good on all paths.
+\item data is not aggregated while being transmitted inside the network.
+\end{itemize}
+
+The problem setting can be of two types: 1) {\it complete}  path information 2) {\it probabilistic} path information which gives us information on the topology paths. Setting 1 is commonly used in static topology where complete path information is available and under scenario where path information is not available or querying path information is too expensive to the network probabilistic path  information is obtained by the probability of a path being getting used that we gain from reported information. 
+
+Under complete path information setting {\it path reception rate} is defined as the probability that a packet successfully transmitted via a path.  Definition directly stated from the paper \cite{krishna:12} for {\it path reception rate} is when {\it n} data packets are transmitted along a path and {\it m} packets are received successfully, the path reception rate is estimated as {\it $m/n$}. A path P is lossy or bad if it has a reception rate below a threshold $t_p$ which is given by the calculation of $(\beta+\alpha^h)/2$ where $\alpha$ is the minimum threshold for reception rate ofr good links and $\beta$ is the maximum threshold rate for bad links.
+
+Under probabilistic path information setting {\it source-sink reception rate} is defined as the probability that a packet is sent from a source to the sink successfully and similar to the above concept source sink pair is declared lossy or good if the reception is below a threshold. 
+
+The sequential testing problem formulation is provided in this paragraph. The testing problem take an input topology by contracting the edges which are good links and resulting in a topology that has only contains bad links that are used by bad paths. Let {\it $L \in  \{l_1,...,l_M\}$} denote the set of potential bad links. Let {\it $P \in  \{p_1,...,p_N\}$} denote the set of bad paths that are identified from end-to- end data. let $P_i \subseteq P$ represent the set of bad paths that use link $l_i$. A binary decision tree is used in the process of sequential testing problem that uses AND Node and OR Node as described in the Figure 13. Thus the total expected checking cost is is the sum of all links that are tested in the process. An {\it optimal} solution is the one which leads to minimum testing cost.
+
+\begin{figure}[h!]
+  \caption{An example of sequential testing}
+  \centering
+    \includegraphics[width=0.5\textwidth]{Fig15}
+\end{figure}
+
+\subsection{Optimal Sequential Testing}
+The problem of optimal sequential testing is NP-{\it hard} and indepth proof is provided in Appendix 1 of \cite{krishna:12}. let $J^*(I)$ denote the minimum expected testing cost from optimal sequential testing. \\
+$J^*(I) = \underset{l_k \in L}{min}\{c_k+p_kJ^*(I_{kb})+(1-p_k)J^*(I_{kg})\}$
 
 \appendix
 %\bibliographystyle{abbrv}
