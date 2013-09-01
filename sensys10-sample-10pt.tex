@@ -479,14 +479,32 @@ The algorithm of finding  $I_{pc}$ is shown in Figure 13, whose complexity is $\
     \includegraphics[width=0.49\textwidth]{Fig13}
 \end{figure}
 
-Multiple node inference for multiple trees involve which runs the inference algorithm on mutliple trees which form a directed acyclic graph. Since the problem of finsing nodes which best explains all the bad paths can be reduce to min set cover problem it is NP-{\it hard} and therefore we invoke {\it Mt-Pa-Naive-Prob and Mt-Pa-Cand} which internally invokes {\it Pa-Naive-Prob and Pa-Cand} on the each tree and the result in unioned. 
+Multiple node inference for multiple trees involve which runs the inference algorithm on mutliple trees which form a directed acyclic graph. 
+Since the problem of finsing nodes which best explains all the bad paths can be reduce to min set cover problem it is NP-{\it hard} and 
+therefore we invoke {\it Mt-Pa-Naive-Prob and Mt-Pa-Cand} which internally invokes {\it Pa-Naive-Prob and Pa-Cand} on the each tree and the result in unioned. 
 
-Experiment results are presented in Figure 12. The candidate-based heuristics reduce the total checking costs of the naive heuristics when $c_i$ is varied, for instance, by 8-18\% when $p_i$ is fixed and $c_i$ is varied and by 7-12\% when both  $p_i$ and $c_i$ are varied. The conlusion that can be made from the experiment results are candidate based heuristics decrease the total checking cost than naive choices multiple node inference in parallel speeds up the fault correction process only with a slight increase in total checking cost the results are same for cases where inaccurate failure probabilities are calculated. 
+Experiment results are presented in Figure 12. 
+The candidate-based heuristics reduce the total checking costs of the naive heuristics when $c_i$ is varied, 
+for instance, by 8-18\% when $p_i$ is fixed and $c_i$ is varied and by 7-12\% when both  $p_i$ and $c_i$ are varied. 
+The conlusion that can be made from the experiment results are candidate based heuristics decrease the total checking cost than naive choices 
+multiple node inference in parallel speeds up the fault correction process only with a slight increase in total checking cost the results are 
+same for cases where inaccurate failure probabilities are calculated. 
 
 \begin{figure*}
   \includegraphics[width=\textwidth,height=8cm]{Fig14}
   \caption{Comparison of Naive-Prob, Cand-Pot, Pa-Naive-Prob, and Pa-Cand in terms of the total checking cost}
 \end{figure*}
+
+\section{Paper2: Fault Localization using passive end-to-end measurements and
+sequential testing for wireless sensor networks}
+Sensor networks are deployed widely and deployed network my have failures from faults like nodes not functioning properly or lossy links\cite{Ramanathan:05} \cite{Tolle:05}, These could have tremendous impact on the network operations and needs to be detected, localized and tested(corrected). Many existing studies have used active measurements to passive measurements for the problem of fault localization \cite{Ramanathan:05} . However active measurements need constant monitoring of network and probing nodes to get their current status, reporting status to centralized or monitoring points this impact the network severely and may cause the energy of the network to go down. For a more stringent energy requirements    
+passive end-to-end measurement proved to be a good for fault localization as it introduces no additional traffic. \cite{krishna:12} paper2 mainly focuses on how active and passive measurements can mutually help each other to reduce the  ambiguity in indentifying the faulty nodes and output an optimal diagnosis sequence which is guided by the end-to-end data. The usage of end-to-end data for fault localization is a concept we are familiar in Paper 1 \cite{pclee:07} but later int he section we explain the key differences between the approaches and how paper 2 \cite{krishna:12} outperforms paper 1 though it is based on sensor networks prove to be very good for wired networks too.
+
+The concept at a 10000ft level is to pick a component to test based on end-to-end passive measurements and and test the component and determine the next component to be tested. This testing procedure continues till all faults have explained the anamolous behaviours in the end-to-end observed data. We perform this procedure recursively till we find all the faults in the network. The problem is an NP-{\it hard} to find out the optimal testing sequence and is proved in \cite{krishna:12}.
+
+In this section past research work in the area of fault localization in sensor networks have been presented.  \cite{Zhao:02}, \cite{Zhao:03}  two papers from Zhao et all presents how active measurements can provide accurate view of the network and desing a residual energy scan of a sensor network which depicts the remaining energy in the system \cite{Zhao:02} and \cite{Zhao:03} computes aggregates liek sum, average, count of network properties ie loss rates and energy levels etc. 
+
+
 
 \appendix
 %\bibliographystyle{abbrv}

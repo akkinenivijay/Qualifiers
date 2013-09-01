@@ -200,4 +200,39 @@ P. P. C. Lee, V. Misra, and D. Rubenstein.
 \newblock Toward Optimal Network Fault Correction via End-to-End Inference.
 \newblock Computer Science Technical Report, Columbia University, May 2006.
 
+\bibitem{krishna:12}
+Bing Wang, Wei Wei, Hieu Dinh, Wei Zeng and Krishna R. Pattipati.
+\newblock Fault Localization Using Passive End-to-End Measurements and Sequential Testing for Wireless Sensor Networks.
+\newblock IEEE TRANSACTIONS ON MOBILE COMPUTING, VOL. 11, NO. 3, MARCH 2012.
+
+\bibitem{Ramanathan:05}
+N. Ramanathan, K. Chang, R. Kapur, L. Girod, E. Kohler, and D. Estrin.
+\newblock Sympathy for the Sensor Network Debugger.
+\newblock Proc. Third Int’l Conf. Embedded Networked Sensor Systems (SenSys), Nov. 2005.
+
+\bibitem{Tolle:05}
+G. Tolle and D. Culler.
+\newblock Design of an Application-Cooperative Management System for Wireless Sensor Networks.
+\newblock Proc. Second European Workshop Wireless Sensor Networks (EWSN), Jan. 2005.
+
+\bibitem{Rost:06}
+S. Rost and H. Balakrishnan.
+\newblock Memento: A Health Monitoring System for Wireless Sensor Networks.
+\newblock Proc. Third Ann. IEEE Comm. Soc. on Sensor and Ad Hoc Comm. and Networks (SECON), Sept. 2006.
+
+\bibitem{Tolle:06}
+K. Whitehouse, G. Tolle, J. Taneja, C. Sharp, S. Kim, J. Jeong, J. Hui, P. Dutta, and D. Culler.
+\newblock Marionette: Providing an Interactive Environment for Wireless Debugging and Development.
+\newblock Proc. Fifth Int’l Conf. Information Processing in Sensor Networks (IPSN), Apr. 2006.
+
+\bibitem{Zhao:02}
+J. Zhao, R. Govindan, and D. Estrin.
+\newblock Residual Energy Scans for Monitoring Wireless Sensor Networks.
+\newblock Proc. IEEE Wireless Comm. and Networking Conf. (WCNC), Mar. 2002.
+
+\bibitem{Zhao:03}
+J. Zhao, R. Govindan, and D. Estrin.
+\newblock Computing Aggregates for Monitoring Wireless Sensor Networks.
+\newblock roc. IEEE Int’l Workshop Sensor Network Protocols and Applications (SNPA), May 2003.
+
 \end{thebibliography}
