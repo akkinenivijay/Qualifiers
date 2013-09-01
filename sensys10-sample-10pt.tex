@@ -533,7 +533,7 @@ The sequential testing problem formulation is provided in this paragraph. The te
 \subsection{Optimal Sequential Testing}
 The problem of optimal sequential testing is NP-{\it hard} and indepth proof is provided in Appendix 1 of \cite{krishna:12}. let $J^*(I)$ denote the minimum expected testing cost from optimal sequential testing. \\
 $J^*(I) = \underset{l_k \in L}{min}\{c_k+p_kJ^*(I_{kb})+(1-p_k)J^*(I_{kg})\}$ \\
-where $I_{kb}$ is the resultant instance when $I_{k}$ is found to be lossy and $I_{kg}$ is the resultanta instance $l_{k}$ is fouund to be good. Links are being classified as {\bf responsible } or {\bf irrelevant}. {\bf Responsible} link is the one which explains if there is atleast one bad path that can only be explained using this.  {\bf Irrelevant} links ae the one which is not used by atleast one bad path. $I_{kb}$ and $I_{kg}$ are being obtained from Algorithm 1 and Algorithm 2 which are explained in Figure 14 and 15 respectively. Algorithm 1 has runtime of ${\bf O(max_k|P_k|+|L|)}$ and Algorithm 2 has runtime of ${\bf O(|L||P|+|L|)}$
+where $I_{kb}$ is the resultant instance when $I_{k}$ is found to be lossy and $I_{kg}$ is the resultanta instance $l_{k}$ is fouund to be good. Links are being classified as {\bf responsible } or {\bf irrelevant}. {\bf Responsible} link is the one which explains if there is atleast one bad path that can only be explained using this.  {\bf Irrelevant} links ae the one which is not used by atleast one bad path. $I_{kb}$ and $I_{kg}$ are being obtained from Algorithm 1 and Algorithm 2 which are explained in Figure 14 and 15 respectively. Algorithm 1 has runtime of ${\bf O(max_k|P_k|+|L|)}$ and Algorithm 2 has runtime of ${\bf O(|L||P|+|L|)}$ and the procedure requires exponential running time.
 
 \begin{figure}[h!]
   \caption{Algorithm 1}
@@ -545,6 +545,19 @@ where $I_{kb}$ is the resultant instance when $I_{k}$ is found to be lossy and $
   \caption{Algorithm 2}
   \centering
     \includegraphics[width=0.5\textwidth]{Fig17}
+\end{figure}
+
+\subsection{Line Topology and Tree Topology}
+In this section we try to devise optimal solution for a line topology and tree topology. The line topology is the easiest as we can stop after finding a lossy link and at most we need to test M links if there are atmost M links. If all the link costs are same we can simply order the links  based on their probabilties and inspect the links. In the case where the probabilties are same for all the links we can inspect them in the order of cost. When the probabiltiy and cost distributions vary the following property should hold for optimal testing strategy and a algorithm for such a condition would be ${\bf O(|N|^2)}$\\
+$\frac{p_{[1]}}{c_{[1]}} \geq \frac{p_{[2]}}{c_{[2}} \geq ... \geq \frac{p_{[n-1]}}{c_{[n-1]}}$
+
+Tree Topology has the following proposition: Consider a tree topology, T . The root of the tree is {\it r}, which has {\it k} children, $u_1, . . . ,u_k$, as illustrated in Fig 16. Let $T(u_i)$ denote the subtree rooted at $u_i$, and $T^1(u_i)$ denote the tree consisting of tree $T(u_i)$ and the link $(u_i,r), i=1,...,k$. Then, \\
+$J^*(T)=\underset{i=1}{\overset{k}{\sum}}J^*(T^1(u_i))$
+
+\begin{figure}[h!]
+  \caption{Illustration of tree topology}
+  \centering
+    \includegraphics[width=0.5\textwidth]{Fig18}
 \end{figure}
 
 \appendix
