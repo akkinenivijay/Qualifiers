@@ -532,7 +532,20 @@ The sequential testing problem formulation is provided in this paragraph. The te
 
 \subsection{Optimal Sequential Testing}
 The problem of optimal sequential testing is NP-{\it hard} and indepth proof is provided in Appendix 1 of \cite{krishna:12}. let $J^*(I)$ denote the minimum expected testing cost from optimal sequential testing. \\
-$J^*(I) = \underset{l_k \in L}{min}\{c_k+p_kJ^*(I_{kb})+(1-p_k)J^*(I_{kg})\}$
+$J^*(I) = \underset{l_k \in L}{min}\{c_k+p_kJ^*(I_{kb})+(1-p_k)J^*(I_{kg})\}$ \\
+where $I_{kb}$ is the resultant instance when $I_{k}$ is found to be lossy and $I_{kg}$ is the resultanta instance $l_{k}$ is fouund to be good. Links are being classified as {\bf responsible } or {\bf irrelevant}. {\bf Responsible} link is the one which explains if there is atleast one bad path that can only be explained using this.  {\bf Irrelevant} links ae the one which is not used by atleast one bad path. $I_{kb}$ and $I_{kg}$ are being obtained from Algorithm 1 and Algorithm 2 which are explained in Figure 14 and 15 respectively.
+
+\begin{figure}[h!]
+  \caption{Algorithm 1}
+  \centering
+    \includegraphics[width=0.5\textwidth]{Fig16}
+\end{figure}
+
+\begin{figure}[h!]
+  \caption{Algorithm 2}
+  \centering
+    \includegraphics[width=0.5\textwidth]{Fig17}
+\end{figure}
 
 \appendix
 %\bibliographystyle{abbrv}
