@@ -561,6 +561,14 @@ In the above proposition we can show that any desicion made in the subtree $T^1(
     \includegraphics[width=0.5\textwidth]{Fig18}
 \end{figure}
 
+\subsection{Heuristic Testing Schemes}
+Based on the proof that optimal sequential testing is NP-{\it hard} and combinatorial complexity two heuristic based algorithms are proposed. Both the alogirthms choose a sequence of inks to be tested based on a heuristic and based on the link test results whether it is good or bad Algorithm 1 or Algorithm 2 are run to obtain the resulting topology. 
+
+The {\it {\bf ordering algorithm}} use the heuristic oh highest $n_kp_k/c_k$ where $n_k$ is the number of paths thats that use a link $l_k$ and it recommends $p_k/c_k$. The complexity of this alogrithm is ${\bf O(L^2P)}$ as each step time is ${\bf O(LP)}$ and there are ${\bf O(L)}$ steps.
+
+The {\bf Greedy algorithm} uses the heuristic  of {\it link gain} and picks the link with the highest gain. Assuming the link is bad or good alogrithm 1 and algorithm 2 provides  and ${\theta}_{kb}$ and ${\theta}_{kg}$ cost savings respectively. Algorithm 1 provides ${\theta}_{kb}$ by summing the testing costs of irrelevant links.  Algorithm 2 provides ${\theta}_{kg}$ by summing the testing costs of all responsible and irrelevant links.
+${\theta}_{k}  = p_k{\theta}_{kb} + (1-p_k){\theta}_{kg}-c_k$ provides the gain for knowing the status of link k. The complexity of this algorithm is ${\bf O(L^3P)}$ this is due to the fact that algorithm 1 and algorithm 2 are run in each step and there L such steps for each link.
+
 \appendix
 %\bibliographystyle{abbrv}
 %\bibliography{sigproc}
